@@ -1,4 +1,5 @@
-﻿using Behaviours;
+﻿using System;
+using Behaviours;
 using MLAgents;
 using Platformer;
 using UnityEngine;
@@ -12,8 +13,8 @@ public class PlatformerAgent : Agent
 
     private Rigidbody parentBody;
     private Transform parentTransform;
-    
-    private int totalFoodEaten;
+
+    public int totalFoodEaten { get; private set; }
 
     public override void InitializeAgent()
     {
@@ -161,7 +162,7 @@ public class PlatformerAgent : Agent
 
     private void VisionPerception(int rays, float distanceModifier, float distance, float rayAngle, float angleModifier)
     {
-        string[] detectableObjects = {"food", "wall"};
+        string[] detectableObjects = {"food", "wall", "agent"};
         for (int i = 0; i < rays; i++)
         {
             float rayDistance = distance - distanceModifier * i;

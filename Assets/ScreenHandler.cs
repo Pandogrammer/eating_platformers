@@ -7,17 +7,18 @@ public class ScreenHandler : MonoBehaviour
     [SerializeField] private Button switchCamera;
     [SerializeField] private Button spawnerRatio;
     [SerializeField] private TextMeshProUGUI spawnerRatioText;
+    [SerializeField] private TextMeshProUGUI agentScore;
     private int lastIndex;
     private Camera[] cameras;
-    
-    private FoodSpawner foodSpawner;
+
+    private FoodSpawner[] foodSpawners;
     private int spawnerCooldown = 1;
 
     void Start()
     {
-        Display.displays[0].SetRenderingResolution(480,800); 
+        Display.displays[0].SetRenderingResolution(480, 800);
         cameras = FindObjectsOfType<Camera>();
-        foodSpawner = FindObjectOfType<FoodSpawner>();
+        foodSpawners = FindObjectsOfType<FoodSpawner>();
         ChangeDisplay();
 
         SetSpawnerText();
@@ -40,7 +41,10 @@ public class ScreenHandler : MonoBehaviour
 
     private void SetSpawnerCooldown()
     {
-        foodSpawner.cooldown = spawnerCooldown == 0 ? 0 : 8.5f - spawnerCooldown * 2f;
+        for (var i = 0; i < foodSpawners.Length; i++)
+        {
+            foodSpawners[i].cooldown = spawnerCooldown == 0 ? 0 : 8.5f + i * 2f - spawnerCooldown * 2f;
+        }
     }
 
     private void ChangeDisplay()
@@ -50,7 +54,7 @@ public class ScreenHandler : MonoBehaviour
         SetDisplay(cameras[lastIndex]);
         lastIndex += 1;
     }
-    
+
 
     private void SetDisplay(Camera camera)
     {
@@ -59,6 +63,13 @@ public class ScreenHandler : MonoBehaviour
             cam.gameObject.SetActive(false);
         }
 
+        agentScore.gameObject.SetActive(false);
         camera.gameObject.SetActive(true);
+        if (camera.gameObject.CompareTag("agent_camera"))
+        {
+            var agent = camera.gameObject.transform.parent.parent.GetComponentInChildren<PlatformerAgent>();
+            agentScore.text =  agent.totalFoodEaten + "/10";
+            agentScore.gameObject.SetActive(true);
+        }
     }
 }
