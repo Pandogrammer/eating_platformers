@@ -1,7 +1,7 @@
 ﻿using food;
 using NUnit.Framework;
 
-namespace Editor.Tests
+namespace Comedor.Editor.Tests
 {
     public class FoodTest
     {

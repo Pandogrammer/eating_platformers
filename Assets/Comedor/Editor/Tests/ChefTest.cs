@@ -1,7 +1,7 @@
 using Chefs;
 using NUnit.Framework;
 
-namespace Editor.Tests
+namespace Comedor.Editor.Tests
 {
     public class ChefTest
     {

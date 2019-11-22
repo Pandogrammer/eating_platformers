@@ -56,8 +56,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CollisionReceiver.cs" />
-     <Compile Include="Assets\CollisionTransmiter.cs" />
      <Compile Include="Assets\Comedor\Scripts\Behaviours\FoodDropBehaviour.cs" />
      <Compile Include="Assets\Comedor\Scripts\Behaviours\FoodEatingBehaviour.cs" />
      <Compile Include="Assets\Comedor\Scripts\Behaviours\MovementBehaviour.cs" />
@@ -93,10 +91,15 @@
      <Compile Include="Assets\Comedor\Scripts\Games\UnityGame.cs" />
      <Compile Include="Assets\Comedor\Scripts\ManualSpawner.cs" />
      <Compile Include="Assets\Comedor\Scripts\ScreenHandler.cs" />
-     <Compile Include="Assets\FlyingAcademy.cs" />
-     <Compile Include="Assets\FlyingAgent.cs" />
-     <Compile Include="Assets\FlyingArea.cs" />
-     <Compile Include="Assets\FlyingBehaviour.cs" />
+     <Compile Include="Assets\Flying\Scripts\CollisionReceiver.cs" />
+     <Compile Include="Assets\Flying\Scripts\CollisionTransmiter.cs" />
+     <Compile Include="Assets\Flying\Scripts\Float\FloatingAcademy.cs" />
+     <Compile Include="Assets\Flying\Scripts\Float\FloatingAgent.cs" />
+     <Compile Include="Assets\Flying\Scripts\Float\FloatingArea.cs" />
+     <Compile Include="Assets\Flying\Scripts\Fly\FlyingAcademy.cs" />
+     <Compile Include="Assets\Flying\Scripts\Fly\FlyingAgent.cs" />
+     <Compile Include="Assets\Flying\Scripts\Fly\FlyingArea.cs" />
+     <Compile Include="Assets\Flying\Scripts\Fly\FlyingBehaviour.cs" />
      <Compile Include="Assets\Platformer\Scripts\PlatformerAcademy.cs" />
      <Compile Include="Assets\Platformer\Scripts\PlatformerAgent.cs" />
      <Compile Include="Assets\Platformer\Scripts\PlatformerArea.cs" />

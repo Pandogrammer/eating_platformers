@@ -1,6 +1,6 @@
 ﻿using MLAgents;
 
-namespace Platformer
+namespace Platformer.Scripts
 {
     public class PlatformerAcademy : Academy
     {

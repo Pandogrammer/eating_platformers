@@ -1,9 +1,8 @@
 using Eaters;
 using Eaters.Messages;
-using Games.Messages;
 using NUnit.Framework;
 
-namespace Editor.Tests
+namespace Comedor.Editor.Tests
 {
     public class EaterTest
     {

@@ -6,7 +6,7 @@ using Games;
 using Games.Messages;
 using NUnit.Framework;
 
-namespace Editor.Tests
+namespace Comedor.Editor.Tests
 {
     public class ContextTest
     {

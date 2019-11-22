@@ -9,8 +9,6 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="CollisionReceiver.cs" t="Include" />
-        <e p="CollisionTransmiter.cs" t="Include" />
         <e p="Comedor" t="Include">
           <e p="Editor" t="Include">
             <e p="Tests" t="Include">
@@ -78,10 +76,23 @@
             <e p="ScreenHandler.cs" t="Include" />
           </e>
         </e>
-        <e p="FlyingAcademy.cs" t="Include" />
-        <e p="FlyingAgent.cs" t="Include" />
-        <e p="FlyingArea.cs" t="Include" />
-        <e p="FlyingBehaviour.cs" t="Include" />
+        <e p="Flying" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="CollisionReceiver.cs" t="Include" />
+            <e p="CollisionTransmiter.cs" t="Include" />
+            <e p="Float" t="Include">
+              <e p="FloatingAcademy.cs" t="Include" />
+              <e p="FloatingAgent.cs" t="Include" />
+              <e p="FloatingArea.cs" t="Include" />
+            </e>
+            <e p="Fly" t="Include">
+              <e p="FlyingAcademy.cs" t="Include" />
+              <e p="FlyingAgent.cs" t="Include" />
+              <e p="FlyingArea.cs" t="Include" />
+              <e p="FlyingBehaviour.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Platformer" t="Include">
           <e p="Scripts" t="Include">
             <e p="PlatformerAcademy.cs" t="Include" />
