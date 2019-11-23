@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Flying/Learning to fly.unity
+- path: Assets/Flying/Learning to float.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

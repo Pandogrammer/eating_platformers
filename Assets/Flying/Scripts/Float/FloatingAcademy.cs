@@ -17,17 +17,10 @@ namespace Flying.Scripts.Float
             maxSteps = (int) resetParameters["max_steps"];
         }
 
-        public override void AcademyReset()
-        {
-            step = 0;
-            var list = areas.ToList();
-            list = TryToAdvanceAreas(list);
-            list = ResetAreas(list);
-        }
 
         private static List<FloatingArea> ResetAreas(List<FloatingArea> list)
         {
-            list.ForEach(x => x.ResetArea());
+            list.ForEach(x => x.Reset());
             return list;
         }
 
@@ -47,7 +40,14 @@ namespace Flying.Scripts.Float
             step += 1;
             areas.ToList().ForEach(x => x.Step(maxSteps));
 
-            if (step > maxSteps) AcademyReset();
+            if (step > maxSteps) Reset();
         }
+
+        private void Reset()
+        {
+            step = 0;
+            var list = areas.ToList();
+            list = TryToAdvanceAreas(list);
+            list = ResetAreas(list);        }
     }
 }

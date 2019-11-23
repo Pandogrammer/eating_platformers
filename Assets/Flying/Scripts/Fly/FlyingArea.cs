@@ -1,49 +1,70 @@
-﻿using MLAgents;
 using UnityEngine;
 
-namespace Flying.Scripts
+namespace Flying.Scripts.Fly
 {
-    public class FlyingArea : Area, CollisionReceiver
+    public static class FlyingArea
     {
-        [SerializeField] private Transform respawnPoint;
-        private FlyingAgent flyingAgent;
 
-        private void Awake()
+        public static FlyingAreaModel Create(FlyingAgentModel agent, Vector3 target,
+            float distanceReward, float distancePunish)
         {
-            flyingAgent = GetComponentInChildren<FlyingAgent>();
+            return new FlyingAreaModel(agent, target, distanceReward, distancePunish, 0);
         }
 
-
-        public void Step(int maxSteps)
+        public static FlyingAreaModel UpdateNextRewardBasedOnPosition(
+            FlyingAreaModel model, Vector3 newPosition)
         {
-            flyingAgent.AddReward(1f / maxSteps);
+            var nextReward = CalculateRewardBasedOnDistance(model, newPosition);
+            return new FlyingAreaModel(model.agent, model.target, 
+                model.distanceReward, model.distancePunish, nextReward);
         }
 
-        public override void ResetArea()
+        public static FlyingAreaModel UpdateAgentModel(FlyingAreaModel model, FlyingAgentModel newModel)
         {
-            flyingAgent.Done();
-            flyingAgent.transform.position = respawnPoint.position;
-            flyingAgent.transform.rotation = Quaternion.identity;
-            flyingAgent.GetComponentInChildren<Rigidbody>().velocity = Vector3.zero;
+            return new FlyingAreaModel(newModel, model.target, model.distanceReward, model.distancePunish,
+                model.nextReward);
         }
 
-
-        public void OnCollisionEnter(Collision other)
+        public static FlyingAreaModel CheckIfAgentDone(FlyingAreaModel model)
         {
-            ResetIfAgent(other.gameObject);
+            return new FlyingAreaModel(model.agent, model.target, model.distanceReward, model.distancePunish,
+                model.nextReward, Validate(model));
         }
-
-        public void OnTriggerEnter(Collider other)
+        
+        private static bool Validate(FlyingAreaModel model)
         {
-            ResetIfAgent(other.gameObject);
+            return Vector3.Distance(model.agent.position, model.target) < 1f;
         }
-
-        private void ResetIfAgent(GameObject other)
+        
+        private static float CalculateRewardBasedOnDistance(FlyingAreaModel model, Vector3 newPosition)
         {
-            if (!other.gameObject.CompareTag("agent")) return;
+            var firstDistance = Vector3.Distance(model.agent.position, model.target);
+            var secondDistance = Vector3.Distance(newPosition, model.target);
+            if (secondDistance < firstDistance)
+                return model.distanceReward;
+            else
+                return model.distancePunish;
+        }
+    }
 
-            flyingAgent.SetReward(-1f);
-            ResetArea();
+    public class FlyingAreaModel
+    {
+        public readonly FlyingAgentModel agent;
+        public readonly Vector3 target;
+        public readonly float distanceReward;
+        public readonly float distancePunish;
+        public readonly float nextReward;
+        public readonly bool done;
+
+        protected internal FlyingAreaModel(FlyingAgentModel agent, Vector3 target, float distanceReward,
+            float distancePunish, float nextReward, bool done = false)
+        {
+            this.agent = agent;
+            this.target = target;
+            this.distanceReward = distanceReward;
+            this.distancePunish = distancePunish;
+            this.nextReward = nextReward;
+            this.done = done;
         }
     }
 }

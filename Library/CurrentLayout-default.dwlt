@@ -14,38 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 0
-    y: 42
+    x: 0.4
+    y: 48.4
     width: 1536
     height: 782
   m_ShowMode: 4
   m_Title: 
-  m_RootView: {fileID: 3}
+  m_RootView: {fileID: 2}
   m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12060, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 30
-    width: 1536
-    height: 732
-  m_MinSize: {x: 200, y: 224}
-  m_MaxSize: {x: 4000, y: 4024}
-  m_ActualView: {fileID: 6}
---- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -58,9 +36,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 4}
-  - {fileID: 2}
+  - {fileID: 3}
   - {fileID: 5}
+  - {fileID: 4}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -69,7 +47,7 @@ MonoBehaviour:
     height: 782
   m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
---- !u!114 &4
+--- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -91,7 +69,7 @@ MonoBehaviour:
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LastLoadedLayoutName: 
---- !u!114 &5
+--- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,7 +90,295 @@ MonoBehaviour:
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
+--- !u!114 &5
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 6}
+  - {fileID: 14}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 30
+    width: 1536
+    height: 732
+  m_MinSize: {x: 913, y: 572}
+  m_MaxSize: {x: 22008, y: 18022}
+  vertical: 0
+  controlID: 220
 --- !u!114 &6
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 7}
+  - {fileID: 13}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1138
+    height: 732
+  m_MinSize: {x: 636, y: 572}
+  m_MaxSize: {x: 18006, y: 18022}
+  vertical: 1
+  controlID: 221
+--- !u!114 &7
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 8}
+  - {fileID: 11}
+  - {fileID: 12}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1138
+    height: 587
+  m_MinSize: {x: 636, y: 472}
+  m_MaxSize: {x: 18006, y: 14022}
+  vertical: 0
+  controlID: 182
+--- !u!114 &8
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 9}
+  - {fileID: 10}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 244
+    height: 587
+  m_MinSize: {x: 232, y: 472}
+  m_MaxSize: {x: 10002, y: 14022}
+  vertical: 1
+  controlID: 144
+--- !u!114 &9
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 244
+    height: 249
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 17}
+  m_Panes:
+  - {fileID: 17}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &10
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 249
+    width: 244
+    height: 338
+  m_MinSize: {x: 232, y: 272}
+  m_MaxSize: {x: 10002, y: 10022}
+  m_ActualView: {fileID: 18}
+  m_Panes:
+  - {fileID: 18}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &11
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 244
+    y: 0
+    width: 595
+    height: 587
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 16}
+  m_Panes:
+  - {fileID: 16}
+  - {fileID: 19}
+  - {fileID: 20}
+  m_Selected: 0
+  m_LastSelected: 1
+--- !u!114 &12
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 839
+    y: 0
+    width: 299
+    height: 587
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 21}
+  m_Panes:
+  - {fileID: 21}
+  - {fileID: 22}
+  m_Selected: 0
+  m_LastSelected: 1
+--- !u!114 &13
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 587
+    width: 1138
+    height: 145
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 23}
+  m_Panes:
+  - {fileID: 23}
+  - {fileID: 24}
+  m_Selected: 0
+  m_LastSelected: 1
+--- !u!114 &14
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 1138
+    y: 0
+    width: 398
+    height: 732
+  m_MinSize: {x: 277, y: 72}
+  m_MaxSize: {x: 4002, y: 4022}
+  m_ActualView: {fileID: 25}
+  m_Panes:
+  - {fileID: 25}
+  - {fileID: 15}
+  m_Selected: 0
+  m_LastSelected: 1
+--- !u!114 &15
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12141, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 300, y: 360}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Navigation
+    m_Image: {fileID: 7874161543223113035, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1138
+    y: 72
+    width: 396
+    height: 713
+  m_ViewDataDictionary: {fileID: 0}
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,10 +399,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 72
-    width: 1540
-    height: 713
+    x: 244.40001
+    y: 78.4
+    width: 593
+    height: 568
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: fb386cfd1d46644489c1e84537e8c7df
@@ -148,9 +414,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 20.148575, y: -28.179619, z: 38.550148}
+    m_Target: {x: -2.3619823, y: -3.810461, z: 2.8503466}
     speed: 2
-    m_Value: {x: 20.148575, y: -28.179619, z: 38.550148}
+    m_Value: {x: -2.3619823, y: -3.810461, z: 2.8503466}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -179,13 +445,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.4102373, y: -0.10491869, z: 0.047510855, w: 0.904734}
+    m_Target: {x: -0.15252551, y: 0.3822781, z: -0.064092204, w: -0.90917534}
     speed: 2
-    m_Value: {x: 0.4088586, y: -0.10498442, z: 0.04735094, w: 0.9053015}
+    m_Value: {x: -0.15251726, y: 0.38225743, z: -0.06408873, w: -0.90912616}
   m_Size:
-    m_Target: 139.53181
+    m_Target: 26.026628
     speed: 2
-    m_Value: 133.52327
+    m_Value: 26.026628
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -211,3 +477,2527 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
+--- !u!114 &17
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12061, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Hierarchy
+    m_Image: {fileID: -590624980919486359, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0.4
+    y: 78.4
+    width: 244
+    height: 230
+  m_ViewDataDictionary: {fileID: 0}
+  m_SceneHierarchy:
+    m_TreeViewState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 9e030100
+      m_LastClickedID: 66462
+      m_ExpandedIDs: ce16c6ffe81ec6ff2a38c6ff02aec6ffe025c8ffba8cc8ffd8bbc8ff58bcc8ff3ec1c8ffbe01c9ff5a48feff6877ffff5479ffff4a7affff007bffff107cffff607cffff1e7dffff5681ffffb28fffffd68ffffff88fffff5c94ffff8694ffff5a98ffff1099ffff829affff0e9dffff70a2ffff06b3fffff6b3ffff76caffff82cbffff84cbffffe2d1ffff18d4ffff84e2ffff90e2ffffcae6ffffe0e6ffffeae6ffff08e7ffff0ee7ffff40e7ffff50e7ffff58e7ffff42eaffff6ceaffffc2eeffff1efbffff0841000096d00100a2d1010078d30100fad3010062d8010090e4010072e5010082e50100
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 9}
+      m_SearchString: 
+    m_ExpandedScenes: []
+    m_CurrenRootInstanceID: 0
+    m_LockTracker:
+      m_IsLocked: 0
+    m_CurrentSortingName: TransformSorting
+  m_WindowGUID: a35e556432659ab4cb66a3f2a98d1124
+--- !u!114 &18
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12014, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_TitleContent:
+    m_Text: Project
+    m_Image: {fileID: -7501376956915960154, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0.4
+    y: 327.6
+    width: 244
+    height: 319
+  m_ViewDataDictionary: {fileID: 0}
+  m_SearchFilter:
+    m_NameFilter: 
+    m_ClassNames: []
+    m_AssetLabels: []
+    m_AssetBundleNames: []
+    m_VersionControlStates: []
+    m_SoftLockControlStates: []
+    m_ReferencingInstanceIDs: 
+    m_SceneHandles: 
+    m_ShowAllHits: 0
+    m_SkipHidden: 0
+    m_SearchArea: 1
+    m_Folders:
+    - Assets/Flying
+  m_ViewMode: 0
+  m_StartGridSize: 16
+  m_LastFolders:
+  - Assets
+  m_LastFoldersGridSize: 16
+  m_LastProjectPath: C:\Users\Farguito\Documents\Unity Projects\Un Poco de IA
+  m_LockTracker:
+    m_IsLocked: 0
+  m_FolderTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 122d0000
+    m_LastClickedID: 11538
+    m_ExpandedIDs: 000000009a2a00006c320000523300007a330000ea330000f0330000443500000a360000563600006c3600006637000000380000803800009c380000ce38000000390000503900009e390000c4390000f8390000483a0000563a0000b63b0000ce3b0000303c0000343d0000aa3d0000b23d000080420000824200008442000086420000884200008a4200008c4200008e42000090420000924200009442000096420000984200009a420000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 0}
+    m_SearchString: 
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+  m_AssetTreeState:
+    scrollPos: {x: 0, y: 104}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: ffffffff000000009a2a00006c320000523300007a330000ea330000f0330000443500000a360000563600006c3600006637000000380000803800009c380000ce380000e638000000390000503900009e390000c4390000f8390000483a0000563a0000a23b0000b63b0000ce3b0000303c0000a23c0000343d00003e3d0000aa3d0000b23d000080420000824200008442000086420000884200008a4200008c4200008e42000090420000924200009442000096420000984200009a4200006a5d0000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 10}
+    m_SearchString: 
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+  m_ListAreaState:
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c6230000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 13}
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+    m_NewAssetIndexInList: -1
+    m_ScrollPosition: {x: 0, y: 0}
+    m_GridSize: 16
+  m_SkipHiddenPackages: 0
+  m_DirectoriesAreaWidth: 110
+--- !u!114 &19
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12111, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 400, y: 100}
+  m_MaxSize: {x: 2048, y: 2048}
+  m_TitleContent:
+    m_Text: Asset Store
+    m_Image: {fileID: 357073275683767465, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 238
+    y: 72
+    width: 740
+    height: 584
+  m_ViewDataDictionary: {fileID: 0}
+--- !u!114 &20
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12914, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Animator
+    m_Image: {fileID: 663490763026382308, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 232
+    y: 72
+    width: 637
+    height: 504
+  m_ViewDataDictionary: {fileID: 0}
+  m_ViewTransforms:
+    m_KeySerializationHelper:
+    - {fileID: 2118697886875699142, guid: ca4850e9e0ce3b74db7d2bb8c4f226fe, type: 2}
+    - {fileID: 2669672163892141240, guid: 289ced0d277a28b40ad2c33c32c150f4, type: 2}
+    m_ValueSerializationHelper:
+    - e00: 0.7071508
+      e01: 0
+      e02: 0
+      e03: 109.84507
+      e10: 0
+      e11: 0.7071508
+      e12: 0
+      e13: 129.7372
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 0.61491376
+      e01: 0
+      e02: 0
+      e03: 78.12121
+      e10: 0
+      e11: 0.61491376
+      e12: 0
+      e13: 154.4696
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  m_PreviewAnimator: {fileID: 0}
+  m_AnimatorController: {fileID: 9100000, guid: ca4850e9e0ce3b74db7d2bb8c4f226fe,
+    type: 2}
+  m_BreadCrumbs:
+  - m_Target: {fileID: 2118697886875699142, guid: ca4850e9e0ce3b74db7d2bb8c4f226fe,
+      type: 2}
+    m_ScrollPosition: {x: 0, y: 0}
+  stateMachineGraph: {fileID: 0}
+  stateMachineGraphGUI: {fileID: 0}
+  blendTreeGraph: {fileID: 0}
+  blendTreeGraphGUI: {fileID: 0}
+  m_AutoLiveLink: 1
+  m_MiniTool: 0
+  m_LockTracker:
+    m_IsLocked: 0
+  m_CurrentEditor: 0
+  m_LayerEditor:
+    m_SelectedLayerIndex: 0
+--- !u!114 &21
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Game
+    m_Image: {fileID: -2087823869225018852, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 839.60004
+    y: 78.4
+    width: 297
+    height: 568
+  m_ViewDataDictionary: {fileID: 0}
+  m_VSyncEnabled: 0
+  m_MaximizeOnPlay: 0
+  m_Gizmos: 0
+  m_Stats: 0
+  m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_TargetDisplay: 0
+  m_ZoomArea:
+    m_HRangeLocked: 0
+    m_VRangeLocked: 0
+    hZoomLockedByDefault: 0
+    vZoomLockedByDefault: 0
+    m_HBaseRangeMin: -148.5
+    m_HBaseRangeMax: 148.5
+    m_VBaseRangeMin: -275.5
+    m_VBaseRangeMax: 275.5
+    m_HAllowExceedBaseRangeMin: 1
+    m_HAllowExceedBaseRangeMax: 1
+    m_VAllowExceedBaseRangeMin: 1
+    m_VAllowExceedBaseRangeMax: 1
+    m_ScaleWithWindow: 0
+    m_HSlider: 0
+    m_VSlider: 0
+    m_IgnoreScrollWheelUntilClicked: 0
+    m_EnableMouseInput: 1
+    m_EnableSliderZoomHorizontal: 0
+    m_EnableSliderZoomVertical: 0
+    m_UniformScale: 1
+    m_UpDirection: 1
+    m_DrawArea:
+      serializedVersion: 2
+      x: 0
+      y: 17
+      width: 297
+      height: 551
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 148.5, y: 275.5}
+    m_MarginLeft: 0
+    m_MarginRight: 0
+    m_MarginTop: 0
+    m_MarginBottom: 0
+    m_LastShownAreaInsideMargins:
+      serializedVersion: 2
+      x: -148.5
+      y: -275.5
+      width: 297
+      height: 551
+    m_MinimalGUI: 1
+  m_defaultScale: 1
+  m_TargetTexture: {fileID: 0}
+  m_CurrentColorSpace: 0
+  m_LastWindowPixelSize: {x: 742.5, y: 1420}
+  m_ClearInEditMode: 1
+  m_NoCameraWarning: 1
+  m_LowResolutionForAspectRatios: 01000000000000000000
+  m_XRRenderMode: 0
+--- !u!114 &22
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13401, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Test Runner
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 839.2
+    y: 72
+    width: 297
+    height: 568
+  m_ViewDataDictionary: {fileID: 0}
+  m_TestTypeToolbarIndex: 1
+  m_PlayModeTestListGUI:
+    m_Window: {fileID: 22}
+    newResultList:
+    - id: 1216
+      uniqueId: '[Un Poco de IA][suite]'
+      name: Un Poco de IA
+      fullName: Un Poco de IA
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    m_ResultText: 
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 6724f40affffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized
+  m_EditModeTestListGUI:
+    m_Window: {fileID: 22}
+    newResultList:
+    - id: 1000
+      uniqueId: '[Un Poco de IA][suite]'
+      name: Un Poco de IA
+      fullName: Un Poco de IA
+      resultStatus: 1
+      duration: 0.2233083
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    - id: 1068
+      uniqueId: '[C:/Users/Farguito/Documents/Unity Projects/Un Poco de IA/Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll][suite]'
+      name: Assembly-CSharp-Editor-firstpass.dll
+      fullName: C:/Users/Farguito/Documents/Unity Projects/Un Poco de IA/Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll
+      resultStatus: 1
+      duration: 1.4040304
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1000
+      parentUniqueId: '[Un Poco de IA][suite]'
+    - id: 1069
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/[MLAgents][suite]
+      name: MLAgents
+      fullName: MLAgents
+      resultStatus: 1
+      duration: 1.2497541
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1068
+      parentUniqueId: '[C:/Users/Farguito/Documents/Unity Projects/Un Poco de IA/Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll][suite]'
+    - id: 1070
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/[MLAgents.Tests][suite]
+      name: Tests
+      fullName: MLAgents.Tests
+      resultStatus: 1
+      duration: 1.1378552
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1069
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/[MLAgents][suite]
+    - id: 1001
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.DemonstrationTests][suite]
+      name: DemonstrationTests
+      fullName: MLAgents.Tests.DemonstrationTests
+      resultStatus: 1
+      duration: 0.1258818
+      messages: 
+      output: "You are trying to create a MonoBehaviour using the 'new' keyword.  This
+        is not allowed.  MonoBehaviours can only be added using AddComponent(). Alternatively,
+        your script can inherit from ScriptableObject or no base class at all\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1070
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/[MLAgents.Tests][suite]
+    - id: 1002
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/DemonstrationTests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.DemonstrationTests.TestSanitization]
+      name: TestSanitization
+      fullName: MLAgents.Tests.DemonstrationTests.TestSanitization
+      resultStatus: 1
+      duration: 0.026138
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.DemonstrationTests][suite]
+    - id: 1003
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/DemonstrationTests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.DemonstrationTests.TestStoreInitalize]
+      name: TestStoreInitalize
+      fullName: MLAgents.Tests.DemonstrationTests.TestStoreInitalize
+      resultStatus: 1
+      duration: 0.0479396
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.DemonstrationTests][suite]
+    - id: 1004
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.DiscreteActionOutputApplierTest][suite]
+      name: DiscreteActionOutputApplierTest
+      fullName: MLAgents.Tests.DiscreteActionOutputApplierTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1075
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/[MLAgents.Tests][suite]
+    - id: 1011
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/DiscreteActionOutputApplierTest/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.DiscreteActionOutputApplierTest.TestDstDataNull]
+      name: TestDstDataNull
+      fullName: MLAgents.Tests.DiscreteActionOutputApplierTest.TestDstDataNull
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.DiscreteActionOutputApplierTest][suite]
+    - id: 1009
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/DiscreteActionOutputApplierTest/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.DiscreteActionOutputApplierTest.TestDstInt]
+      name: TestDstInt
+      fullName: MLAgents.Tests.DiscreteActionOutputApplierTest.TestDstInt
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.DiscreteActionOutputApplierTest][suite]
+    - id: 1007
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/DiscreteActionOutputApplierTest/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.DiscreteActionOutputApplierTest.TestEvalBatching]
+      name: TestEvalBatching
+      fullName: MLAgents.Tests.DiscreteActionOutputApplierTest.TestEvalBatching
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.DiscreteActionOutputApplierTest][suite]
+    - id: 1006
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/DiscreteActionOutputApplierTest/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.DiscreteActionOutputApplierTest.TestEvalLogits]
+      name: TestEvalLogits
+      fullName: MLAgents.Tests.DiscreteActionOutputApplierTest.TestEvalLogits
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.DiscreteActionOutputApplierTest][suite]
+    - id: 1005
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/DiscreteActionOutputApplierTest/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.DiscreteActionOutputApplierTest.TestEvalP]
+      name: TestEvalP
+      fullName: MLAgents.Tests.DiscreteActionOutputApplierTest.TestEvalP
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.DiscreteActionOutputApplierTest][suite]
+    - id: 1010
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/DiscreteActionOutputApplierTest/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.DiscreteActionOutputApplierTest.TestSrcDataNull]
+      name: TestSrcDataNull
+      fullName: MLAgents.Tests.DiscreteActionOutputApplierTest.TestSrcDataNull
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.DiscreteActionOutputApplierTest][suite]
+    - id: 1008
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/DiscreteActionOutputApplierTest/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.DiscreteActionOutputApplierTest.TestSrcInt]
+      name: TestSrcInt
+      fullName: MLAgents.Tests.DiscreteActionOutputApplierTest.TestSrcInt
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.DiscreteActionOutputApplierTest][suite]
+    - id: 1012
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/DiscreteActionOutputApplierTest/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.DiscreteActionOutputApplierTest.TestUnequalBatchSize]
+      name: TestUnequalBatchSize
+      fullName: MLAgents.Tests.DiscreteActionOutputApplierTest.TestUnequalBatchSize
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.DiscreteActionOutputApplierTest][suite]
+    - id: 1004
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestActionMasker][suite]
+      name: EditModeTestActionMasker
+      fullName: MLAgents.Tests.EditModeTestActionMasker
+      resultStatus: 1
+      duration: 0.0489822
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1070
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/[MLAgents.Tests][suite]
+    - id: 1005
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/EditModeTestActionMasker/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestActionMasker.Contruction]
+      name: Contruction
+      fullName: MLAgents.Tests.EditModeTestActionMasker.Contruction
+      resultStatus: 1
+      duration: 0.000986
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestActionMasker][suite]
+    - id: 1006
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/EditModeTestActionMasker/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestActionMasker.FailsWithContinuous]
+      name: FailsWithContinuous
+      fullName: MLAgents.Tests.EditModeTestActionMasker.FailsWithContinuous
+      resultStatus: 1
+      duration: 0.0072609
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestActionMasker][suite]
+    - id: 1008
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/EditModeTestActionMasker/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestActionMasker.FirstBranchMask]
+      name: FirstBranchMask
+      fullName: MLAgents.Tests.EditModeTestActionMasker.FirstBranchMask
+      resultStatus: 1
+      duration: 0.0024769
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestActionMasker][suite]
+    - id: 1010
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/EditModeTestActionMasker/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestActionMasker.MaskReset]
+      name: MaskReset
+      fullName: MLAgents.Tests.EditModeTestActionMasker.MaskReset
+      resultStatus: 1
+      duration: 0.0007648
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestActionMasker][suite]
+    - id: 1012
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/EditModeTestActionMasker/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestActionMasker.MultipleMaskEdit]
+      name: MultipleMaskEdit
+      fullName: MLAgents.Tests.EditModeTestActionMasker.MultipleMaskEdit
+      resultStatus: 1
+      duration: 0.0006228
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestActionMasker][suite]
+    - id: 1007
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/EditModeTestActionMasker/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestActionMasker.NullMask]
+      name: NullMask
+      fullName: MLAgents.Tests.EditModeTestActionMasker.NullMask
+      resultStatus: 1
+      duration: 0.0003747
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestActionMasker][suite]
+    - id: 1009
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/EditModeTestActionMasker/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestActionMasker.SecondBranchMask]
+      name: SecondBranchMask
+      fullName: MLAgents.Tests.EditModeTestActionMasker.SecondBranchMask
+      resultStatus: 1
+      duration: 0.0005064
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestActionMasker][suite]
+    - id: 1011
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/EditModeTestActionMasker/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestActionMasker.ThrowsError]
+      name: ThrowsError
+      fullName: MLAgents.Tests.EditModeTestActionMasker.ThrowsError
+      resultStatus: 1
+      duration: 0.0010756
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestActionMasker][suite]
+    - id: 1027
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestGeneration][suite]
+      name: EditModeTestGeneration
+      fullName: MLAgents.Tests.EditModeTestGeneration
+      resultStatus: 1
+      duration: 0.0181303
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1070
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/[MLAgents.Tests][suite]
+    - id: 1028
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/EditModeTestGeneration/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestGeneration.TestAcademy]
+      name: TestAcademy
+      fullName: MLAgents.Tests.EditModeTestGeneration.TestAcademy
+      resultStatus: 1
+      duration: 0.0017278
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1027
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestGeneration][suite]
+    - id: 1029
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/EditModeTestGeneration/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestGeneration.TestAgent]
+      name: TestAgent
+      fullName: MLAgents.Tests.EditModeTestGeneration.TestAgent
+      resultStatus: 1
+      duration: 0.0010027
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1027
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestGeneration][suite]
+    - id: 1030
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestInitialization][suite]
+      name: EditModeTestInitialization
+      fullName: MLAgents.Tests.EditModeTestInitialization
+      resultStatus: 1
+      duration: 0.0183051
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1070
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/[MLAgents.Tests][suite]
+    - id: 1031
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/EditModeTestInitialization/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestInitialization.TestAcademy]
+      name: TestAcademy
+      fullName: MLAgents.Tests.EditModeTestInitialization.TestAcademy
+      resultStatus: 1
+      duration: 0.0035908
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1030
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestInitialization][suite]
+    - id: 1032
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/EditModeTestInitialization/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestInitialization.TestAgent]
+      name: TestAgent
+      fullName: MLAgents.Tests.EditModeTestInitialization.TestAgent
+      resultStatus: 1
+      duration: 0.0028044
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1030
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestInitialization][suite]
+    - id: 1013
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestInternalBrainTensorApplier][suite]
+      name: EditModeTestInternalBrainTensorApplier
+      fullName: MLAgents.Tests.EditModeTestInternalBrainTensorApplier
+      resultStatus: 1
+      duration: 0.0345027
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1070
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/[MLAgents.Tests][suite]
+    - id: 1015
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/EditModeTestInternalBrainTensorApplier/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestInternalBrainTensorApplier.ApplyContinuousActionOutput]
+      name: ApplyContinuousActionOutput
+      fullName: MLAgents.Tests.EditModeTestInternalBrainTensorApplier.ApplyContinuousActionOutput
+      resultStatus: 1
+      duration: 0.0077255
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestInternalBrainTensorApplier][suite]
+    - id: 1016
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/EditModeTestInternalBrainTensorApplier/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestInternalBrainTensorApplier.ApplyDiscreteActionOutput]
+      name: ApplyDiscreteActionOutput
+      fullName: MLAgents.Tests.EditModeTestInternalBrainTensorApplier.ApplyDiscreteActionOutput
+      resultStatus: 1
+      duration: 0.0071565
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestInternalBrainTensorApplier][suite]
+    - id: 1017
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/EditModeTestInternalBrainTensorApplier/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestInternalBrainTensorApplier.ApplyMemoryOutput]
+      name: ApplyMemoryOutput
+      fullName: MLAgents.Tests.EditModeTestInternalBrainTensorApplier.ApplyMemoryOutput
+      resultStatus: 1
+      duration: 0.0014301
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestInternalBrainTensorApplier][suite]
+    - id: 1018
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/EditModeTestInternalBrainTensorApplier/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestInternalBrainTensorApplier.ApplyValueEstimate]
+      name: ApplyValueEstimate
+      fullName: MLAgents.Tests.EditModeTestInternalBrainTensorApplier.ApplyValueEstimate
+      resultStatus: 1
+      duration: 0.0011759
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestInternalBrainTensorApplier][suite]
+    - id: 1023
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/EditModeTestInternalBrainTensorApplier/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestInternalBrainTensorApplier.Construction]
+      name: Construction
+      fullName: MLAgents.Tests.EditModeTestInternalBrainTensorApplier.Construction
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1022
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestInternalBrainTensorApplier][suite]
+    - id: 1019
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestInternalBrainTensorGenerator][suite]
+      name: EditModeTestInternalBrainTensorGenerator
+      fullName: MLAgents.Tests.EditModeTestInternalBrainTensorGenerator
+      resultStatus: 1
+      duration: 0.0318094
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1070
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/[MLAgents.Tests][suite]
+    - id: 1029
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/EditModeTestInternalBrainTensorGenerator/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestInternalBrainTensorGenerator.Construction]
+      name: Construction
+      fullName: MLAgents.Tests.EditModeTestInternalBrainTensorGenerator.Construction
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1028
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestInternalBrainTensorGenerator][suite]
+    - id: 1026
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/EditModeTestInternalBrainTensorGenerator/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestInternalBrainTensorGenerator.GenerateActionMaskInput]
+      name: GenerateActionMaskInput
+      fullName: MLAgents.Tests.EditModeTestInternalBrainTensorGenerator.GenerateActionMaskInput
+      resultStatus: 1
+      duration: 0.0039991
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1019
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestInternalBrainTensorGenerator][suite]
+    - id: 1021
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/EditModeTestInternalBrainTensorGenerator/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestInternalBrainTensorGenerator.GenerateBatchSize]
+      name: GenerateBatchSize
+      fullName: MLAgents.Tests.EditModeTestInternalBrainTensorGenerator.GenerateBatchSize
+      resultStatus: 1
+      duration: 0.0008345
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1019
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestInternalBrainTensorGenerator][suite]
+    - id: 1025
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/EditModeTestInternalBrainTensorGenerator/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestInternalBrainTensorGenerator.GeneratePreviousActionInput]
+      name: GeneratePreviousActionInput
+      fullName: MLAgents.Tests.EditModeTestInternalBrainTensorGenerator.GeneratePreviousActionInput
+      resultStatus: 1
+      duration: 0.0010545
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1019
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestInternalBrainTensorGenerator][suite]
+    - id: 1024
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/EditModeTestInternalBrainTensorGenerator/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestInternalBrainTensorGenerator.GenerateRecurrentInput]
+      name: GenerateRecurrentInput
+      fullName: MLAgents.Tests.EditModeTestInternalBrainTensorGenerator.GenerateRecurrentInput
+      resultStatus: 1
+      duration: 0.0011638
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1019
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestInternalBrainTensorGenerator][suite]
+    - id: 1022
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/EditModeTestInternalBrainTensorGenerator/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestInternalBrainTensorGenerator.GenerateSequenceLength]
+      name: GenerateSequenceLength
+      fullName: MLAgents.Tests.EditModeTestInternalBrainTensorGenerator.GenerateSequenceLength
+      resultStatus: 1
+      duration: 0.0005918
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1019
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestInternalBrainTensorGenerator][suite]
+    - id: 1023
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/EditModeTestInternalBrainTensorGenerator/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestInternalBrainTensorGenerator.GenerateVectorObservation]
+      name: GenerateVectorObservation
+      fullName: MLAgents.Tests.EditModeTestInternalBrainTensorGenerator.GenerateVectorObservation
+      resultStatus: 1
+      duration: 0.0010685
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1019
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestInternalBrainTensorGenerator][suite]
+    - id: 1042
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestMiscellaneous][suite]
+      name: EditModeTestMiscellaneous
+      fullName: MLAgents.Tests.EditModeTestMiscellaneous
+      resultStatus: 1
+      duration: 0.0384296
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1070
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/[MLAgents.Tests][suite]
+    - id: 1044
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/EditModeTestMiscellaneous/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestMiscellaneous.TestCumulativeReward]
+      name: TestCumulativeReward
+      fullName: MLAgents.Tests.EditModeTestMiscellaneous.TestCumulativeReward
+      resultStatus: 1
+      duration: 0.017705
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1042
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestMiscellaneous][suite]
+    - id: 1043
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/EditModeTestMiscellaneous/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestMiscellaneous.TestResetOnDone]
+      name: TestResetOnDone
+      fullName: MLAgents.Tests.EditModeTestMiscellaneous.TestResetOnDone
+      resultStatus: 1
+      duration: 0.0051009
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1042
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestMiscellaneous][suite]
+    - id: 1036
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestReset][suite]
+      name: EditModeTestReset
+      fullName: MLAgents.Tests.EditModeTestReset
+      resultStatus: 1
+      duration: 0.5145792
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1070
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/[MLAgents.Tests][suite]
+    - id: 1037
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/EditModeTestReset/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestReset.TestAcademy]
+      name: TestAcademy
+      fullName: MLAgents.Tests.EditModeTestReset.TestAcademy
+      resultStatus: 1
+      duration: 0.004483
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1036
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestReset][suite]
+    - id: 1038
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/EditModeTestReset/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestReset.TestAgent]
+      name: TestAgent
+      fullName: MLAgents.Tests.EditModeTestReset.TestAgent
+      resultStatus: 1
+      duration: 0.4977081
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1036
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestReset][suite]
+    - id: 1033
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestStep][suite]
+      name: EditModeTestStep
+      fullName: MLAgents.Tests.EditModeTestStep
+      resultStatus: 1
+      duration: 0.0247158
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1070
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/[MLAgents.Tests][suite]
+    - id: 1034
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/EditModeTestStep/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestStep.TestAcademy]
+      name: TestAcademy
+      fullName: MLAgents.Tests.EditModeTestStep.TestAcademy
+      resultStatus: 1
+      duration: 0.0018884
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1033
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestStep][suite]
+    - id: 1035
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/EditModeTestStep/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestStep.TestAgent]
+      name: TestAgent
+      fullName: MLAgents.Tests.EditModeTestStep.TestAgent
+      resultStatus: 1
+      duration: 0.0050592
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1033
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.EditModeTestStep][suite]
+    - id: 1045
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.MultinomialTest][suite]
+      name: MultinomialTest
+      fullName: MLAgents.Tests.MultinomialTest
+      resultStatus: 1
+      duration: 0.0288585
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1070
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/[MLAgents.Tests][suite]
+    - id: 1052
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/MultinomialTest/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.MultinomialTest.TestDim1]
+      name: TestDim1
+      fullName: MLAgents.Tests.MultinomialTest.TestDim1
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.MultinomialTest][suite]
+    - id: 1053
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/MultinomialTest/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.MultinomialTest.TestDim1Unscaled]
+      name: TestDim1Unscaled
+      fullName: MLAgents.Tests.MultinomialTest.TestDim1Unscaled
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.MultinomialTest][suite]
+    - id: 1054
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/MultinomialTest/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.MultinomialTest.TestDim3]
+      name: TestDim3
+      fullName: MLAgents.Tests.MultinomialTest.TestDim3
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.MultinomialTest][suite]
+    - id: 1055
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/MultinomialTest/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.MultinomialTest.TestDim3Unscaled]
+      name: TestDim3Unscaled
+      fullName: MLAgents.Tests.MultinomialTest.TestDim3Unscaled
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.MultinomialTest][suite]
+    - id: 1054
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.RandomNormalTest][suite]
+      name: RandomNormalTest
+      fullName: MLAgents.Tests.RandomNormalTest
+      resultStatus: 1
+      duration: 0.0398629
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1070
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/[MLAgents.Tests][suite]
+    - id: 1061
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/RandomNormalTest/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.RandomNormalTest.RandomNormalTestDistribution]
+      name: RandomNormalTestDistribution
+      fullName: MLAgents.Tests.RandomNormalTest.RandomNormalTestDistribution
+      resultStatus: 1
+      duration: 0.0156262
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1054
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.RandomNormalTest][suite]
+    - id: 1055
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/RandomNormalTest/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.RandomNormalTest.RandomNormalTestTwoDouble]
+      name: RandomNormalTestTwoDouble
+      fullName: MLAgents.Tests.RandomNormalTest.RandomNormalTestTwoDouble
+      resultStatus: 1
+      duration: 0.0003971
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1054
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.RandomNormalTest][suite]
+    - id: 1056
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/RandomNormalTest/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.RandomNormalTest.RandomNormalTestWithMean]
+      name: RandomNormalTestWithMean
+      fullName: MLAgents.Tests.RandomNormalTest.RandomNormalTestWithMean
+      resultStatus: 1
+      duration: 0.0004079
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1054
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.RandomNormalTest][suite]
+    - id: 1058
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/RandomNormalTest/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.RandomNormalTest.RandomNormalTestWithMeanStddev]
+      name: RandomNormalTestWithMeanStddev
+      fullName: MLAgents.Tests.RandomNormalTest.RandomNormalTestWithMeanStddev
+      resultStatus: 1
+      duration: 0.0004183
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1054
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.RandomNormalTest][suite]
+    - id: 1057
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/RandomNormalTest/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.RandomNormalTest.RandomNormalTestWithStddev]
+      name: RandomNormalTestWithStddev
+      fullName: MLAgents.Tests.RandomNormalTest.RandomNormalTestWithStddev
+      resultStatus: 1
+      duration: 0.00039
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1054
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.RandomNormalTest][suite]
+    - id: 1063
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.RayPerceptionTests][suite]
+      name: RayPerceptionTests
+      fullName: MLAgents.Tests.RayPerceptionTests
+      resultStatus: 1
+      duration: 0.0360482
+      messages: 
+      output: "You are trying to create a MonoBehaviour using the 'new' keyword.  This
+        is not allowed.  MonoBehaviours can only be added using AddComponent(). Alternatively,
+        your script can inherit from ScriptableObject or no base class at all\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1070
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/[MLAgents.Tests][suite]
+    - id: 1065
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/RayPerceptionTests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.RayPerceptionTests.TestPerception2D]
+      name: TestPerception2D
+      fullName: MLAgents.Tests.RayPerceptionTests.TestPerception2D
+      resultStatus: 1
+      duration: 0.0082662
+      messages: 
+      output: "12\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1063
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.RayPerceptionTests][suite]
+    - id: 1064
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/RayPerceptionTests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.RayPerceptionTests.TestPerception3D]
+      name: TestPerception3D
+      fullName: MLAgents.Tests.RayPerceptionTests.TestPerception3D
+      resultStatus: 1
+      duration: 0.005867
+      messages: 
+      output: "12\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1063
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.RayPerceptionTests][suite]
+    - id: 1065
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.TensorUtilsTest][suite]
+      name: TensorUtilsTest
+      fullName: MLAgents.Tests.TensorUtilsTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1075
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/[MLAgents.Tests][suite]
+    - id: 1067
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/TensorUtilsTest/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.TensorUtilsTest.RandomNormalTestDataNull]
+      name: RandomNormalTestDataNull
+      fullName: MLAgents.Tests.TensorUtilsTest.RandomNormalTestDataNull
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1065
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.TensorUtilsTest][suite]
+    - id: 1068
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/TensorUtilsTest/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.TensorUtilsTest.RandomNormalTestTensor]
+      name: RandomNormalTestTensor
+      fullName: MLAgents.Tests.TensorUtilsTest.RandomNormalTestTensor
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1065
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.TensorUtilsTest][suite]
+    - id: 1066
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/TensorUtilsTest/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.TensorUtilsTest.RandomNormalTestTensorInt]
+      name: RandomNormalTestTensorInt
+      fullName: MLAgents.Tests.TensorUtilsTest.RandomNormalTestTensorInt
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1065
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.TensorUtilsTest][suite]
+    - id: 1069
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.TimerTests][suite]
+      name: TimerTests
+      fullName: MLAgents.Tests.TimerTests
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1075
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/[MLAgents.Tests][suite]
+    - id: 1070
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/TimerTests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.TimerTests.TestNested]
+      name: TestNested
+      fullName: MLAgents.Tests.TimerTests.TestNested
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1069
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.TimerTests][suite]
+    - id: 1066
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.UtilitiesTests][suite]
+      name: UtilitiesTests
+      fullName: MLAgents.Tests.UtilitiesTests
+      resultStatus: 1
+      duration: 0.0168265
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1070
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/[MLAgents.Tests][suite]
+    - id: 1067
+      uniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/UtilitiesTests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.UtilitiesTests.TestCumSum]
+      name: TestCumSum
+      fullName: MLAgents.Tests.UtilitiesTests.TestCumSum
+      resultStatus: 1
+      duration: 0.0017004
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1066
+      parentUniqueId: Assembly-CSharp-Editor-firstpass.dll/MLAgents/Tests/[Assembly-CSharp-Editor-firstpass][MLAgents.Tests.UtilitiesTests][suite]
+    - id: 1073
+      uniqueId: '[C:/Users/Farguito/Documents/Unity Projects/Un Poco de IA/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll][suite]'
+      name: Assembly-CSharp-Editor.dll
+      fullName: C:/Users/Farguito/Documents/Unity Projects/Un Poco de IA/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+      resultStatus: 1
+      duration: 0.1349099
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1000
+      parentUniqueId: '[Un Poco de IA][suite]'
+    - id: 1101
+      uniqueId: Assembly-CSharp-Editor.dll/[Comedor][suite]
+      name: Comedor
+      fullName: Comedor
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1097
+      parentUniqueId: '[C:/Users/Farguito/Documents/Unity Projects/Un Poco de IA/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll][suite]'
+    - id: 1102
+      uniqueId: Assembly-CSharp-Editor.dll/Comedor/[Comedor.Editor][suite]
+      name: Editor
+      fullName: Comedor.Editor
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1101
+      parentUniqueId: Assembly-CSharp-Editor.dll/[Comedor][suite]
+    - id: 1103
+      uniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/[Comedor.Editor.Tests][suite]
+      name: Tests
+      fullName: Comedor.Editor.Tests
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1102
+      parentUniqueId: Assembly-CSharp-Editor.dll/Comedor/[Comedor.Editor][suite]
+    - id: 1078
+      uniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/Tests/[Assembly-CSharp-Editor][Comedor.Editor.Tests.ChefTest][suite]
+      name: ChefTest
+      fullName: Comedor.Editor.Tests.ChefTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1103
+      parentUniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/[Comedor.Editor.Tests][suite]
+    - id: 1079
+      uniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/Tests/ChefTest/[Assembly-CSharp-Editor][Comedor.Editor.Tests.ChefTest.decrease_happiness]
+      name: decrease_happiness
+      fullName: Comedor.Editor.Tests.ChefTest.decrease_happiness
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1078
+      parentUniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/Tests/[Assembly-CSharp-Editor][Comedor.Editor.Tests.ChefTest][suite]
+    - id: 1082
+      uniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/Tests/ChefTest/[Assembly-CSharp-Editor][Comedor.Editor.Tests.ChefTest.happy_state]
+      name: happy_state
+      fullName: Comedor.Editor.Tests.ChefTest.happy_state
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1078
+      parentUniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/Tests/[Assembly-CSharp-Editor][Comedor.Editor.Tests.ChefTest][suite]
+    - id: 1080
+      uniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/Tests/ChefTest/[Assembly-CSharp-Editor][Comedor.Editor.Tests.ChefTest.increase_happiness]
+      name: increase_happiness
+      fullName: Comedor.Editor.Tests.ChefTest.increase_happiness
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1078
+      parentUniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/Tests/[Assembly-CSharp-Editor][Comedor.Editor.Tests.ChefTest][suite]
+    - id: 1081
+      uniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/Tests/ChefTest/[Assembly-CSharp-Editor][Comedor.Editor.Tests.ChefTest.sad_state]
+      name: sad_state
+      fullName: Comedor.Editor.Tests.ChefTest.sad_state
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1078
+      parentUniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/Tests/[Assembly-CSharp-Editor][Comedor.Editor.Tests.ChefTest][suite]
+    - id: 1091
+      uniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/Tests/[Assembly-CSharp-Editor][Comedor.Editor.Tests.ContextTest][suite]
+      name: ContextTest
+      fullName: Comedor.Editor.Tests.ContextTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1103
+      parentUniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/[Comedor.Editor.Tests][suite]
+    - id: 1094
+      uniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/Tests/ContextTest/[Assembly-CSharp-Editor][Comedor.Editor.Tests.ContextTest.clean_then_rotten_food_disappears]
+      name: clean_then_rotten_food_disappears
+      fullName: Comedor.Editor.Tests.ContextTest.clean_then_rotten_food_disappears
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1091
+      parentUniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/Tests/[Assembly-CSharp-Editor][Comedor.Editor.Tests.ContextTest][suite]
+    - id: 1096
+      uniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/Tests/ContextTest/[Assembly-CSharp-Editor][Comedor.Editor.Tests.ContextTest.dropped_food_then_food_appears]
+      name: dropped_food_then_food_appears
+      fullName: Comedor.Editor.Tests.ContextTest.dropped_food_then_food_appears
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1091
+      parentUniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/Tests/[Assembly-CSharp-Editor][Comedor.Editor.Tests.ContextTest][suite]
+    - id: 1095
+      uniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/Tests/ContextTest/[Assembly-CSharp-Editor][Comedor.Editor.Tests.ContextTest.eat_then_hunger_decreases]
+      name: eat_then_hunger_decreases
+      fullName: Comedor.Editor.Tests.ContextTest.eat_then_hunger_decreases
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1091
+      parentUniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/Tests/[Assembly-CSharp-Editor][Comedor.Editor.Tests.ContextTest][suite]
+    - id: 1093
+      uniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/Tests/ContextTest/[Assembly-CSharp-Editor][Comedor.Editor.Tests.ContextTest.tick_then_food_rots]
+      name: tick_then_food_rots
+      fullName: Comedor.Editor.Tests.ContextTest.tick_then_food_rots
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1091
+      parentUniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/Tests/[Assembly-CSharp-Editor][Comedor.Editor.Tests.ContextTest][suite]
+    - id: 1092
+      uniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/Tests/ContextTest/[Assembly-CSharp-Editor][Comedor.Editor.Tests.ContextTest.tick_then_tick_increments]
+      name: tick_then_tick_increments
+      fullName: Comedor.Editor.Tests.ContextTest.tick_then_tick_increments
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1091
+      parentUniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/Tests/[Assembly-CSharp-Editor][Comedor.Editor.Tests.ContextTest][suite]
+    - id: 1083
+      uniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/Tests/[Assembly-CSharp-Editor][Comedor.Editor.Tests.EaterTest][suite]
+      name: EaterTest
+      fullName: Comedor.Editor.Tests.EaterTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1103
+      parentUniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/[Comedor.Editor.Tests][suite]
+    - id: 1085
+      uniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/Tests/EaterTest/[Assembly-CSharp-Editor][Comedor.Editor.Tests.EaterTest.decrease_hunger]
+      name: decrease_hunger
+      fullName: Comedor.Editor.Tests.EaterTest.decrease_hunger
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1083
+      parentUniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/Tests/[Assembly-CSharp-Editor][Comedor.Editor.Tests.EaterTest][suite]
+    - id: 1087
+      uniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/Tests/EaterTest/[Assembly-CSharp-Editor][Comedor.Editor.Tests.EaterTest.happy_state]
+      name: happy_state
+      fullName: Comedor.Editor.Tests.EaterTest.happy_state
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1083
+      parentUniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/Tests/[Assembly-CSharp-Editor][Comedor.Editor.Tests.EaterTest][suite]
+    - id: 1084
+      uniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/Tests/EaterTest/[Assembly-CSharp-Editor][Comedor.Editor.Tests.EaterTest.increment_hunger]
+      name: increment_hunger
+      fullName: Comedor.Editor.Tests.EaterTest.increment_hunger
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1083
+      parentUniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/Tests/[Assembly-CSharp-Editor][Comedor.Editor.Tests.EaterTest][suite]
+    - id: 1086
+      uniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/Tests/EaterTest/[Assembly-CSharp-Editor][Comedor.Editor.Tests.EaterTest.sad_state]
+      name: sad_state
+      fullName: Comedor.Editor.Tests.EaterTest.sad_state
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1083
+      parentUniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/Tests/[Assembly-CSharp-Editor][Comedor.Editor.Tests.EaterTest][suite]
+    - id: 1088
+      uniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/Tests/[Assembly-CSharp-Editor][Comedor.Editor.Tests.FoodTest][suite]
+      name: FoodTest
+      fullName: Comedor.Editor.Tests.FoodTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1103
+      parentUniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/[Comedor.Editor.Tests][suite]
+    - id: 1089
+      uniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/Tests/FoodTest/[Assembly-CSharp-Editor][Comedor.Editor.Tests.FoodTest.food_rots_then_rot_increases]
+      name: food_rots_then_rot_increases
+      fullName: Comedor.Editor.Tests.FoodTest.food_rots_then_rot_increases
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1088
+      parentUniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/Tests/[Assembly-CSharp-Editor][Comedor.Editor.Tests.FoodTest][suite]
+    - id: 1090
+      uniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/Tests/FoodTest/[Assembly-CSharp-Editor][Comedor.Editor.Tests.FoodTest.rot_reaches_limit_then_food_rottens]
+      name: rot_reaches_limit_then_food_rottens
+      fullName: Comedor.Editor.Tests.FoodTest.rot_reaches_limit_then_food_rottens
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1088
+      parentUniqueId: Assembly-CSharp-Editor.dll/Comedor/Editor/Tests/[Assembly-CSharp-Editor][Comedor.Editor.Tests.FoodTest][suite]
+    - id: 1098
+      uniqueId: Assembly-CSharp-Editor.dll/[Flying][suite]
+      name: Flying
+      fullName: Flying
+      resultStatus: 1
+      duration: 0.1131296
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1097
+      parentUniqueId: '[C:/Users/Farguito/Documents/Unity Projects/Un Poco de IA/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll][suite]'
+    - id: 1099
+      uniqueId: Assembly-CSharp-Editor.dll/Flying/[Flying.Editor][suite]
+      name: Editor
+      fullName: Flying.Editor
+      resultStatus: 1
+      duration: 0.0986943
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1098
+      parentUniqueId: Assembly-CSharp-Editor.dll/[Flying][suite]
+    - id: 1100
+      uniqueId: Assembly-CSharp-Editor.dll/Flying/Editor/[Flying.Editor.Tests][suite]
+      name: Tests
+      fullName: Flying.Editor.Tests
+      resultStatus: 1
+      duration: 0.0861132
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1099
+      parentUniqueId: Assembly-CSharp-Editor.dll/Flying/[Flying.Editor][suite]
+    - id: 1109
+      uniqueId: Assembly-CSharp-Editor.dll/Flying/Editor/Tests/[Flying.Editor.Tests.Flying][suite]
+      name: Flying
+      fullName: Flying.Editor.Tests.Flying
+      resultStatus: 1
+      duration: 0.0779156
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1108
+      parentUniqueId: Assembly-CSharp-Editor.dll/Flying/Editor/[Flying.Editor.Tests][suite]
+    - id: 1084
+      uniqueId: Assembly-CSharp-Editor.dll/Flying/Editor/Tests/Flying/[Assembly-CSharp-Editor][Flying.Editor.Tests.Flying.FlyingAgentTest][suite]
+      name: FlyingAgentTest
+      fullName: Flying.Editor.Tests.Flying.FlyingAgentTest
+      resultStatus: 1
+      duration: 0.0682413
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1109
+      parentUniqueId: Assembly-CSharp-Editor.dll/Flying/Editor/Tests/[Flying.Editor.Tests.Flying][suite]
+    - id: 1085
+      uniqueId: Assembly-CSharp-Editor.dll/Flying/Editor/Tests/Flying/FlyingAgentTest/[Assembly-CSharp-Editor][Flying.Editor.Tests.Flying.FlyingAgentTest.agent_creation]
+      name: agent_creation
+      fullName: Flying.Editor.Tests.Flying.FlyingAgentTest.agent_creation
+      resultStatus: 1
+      duration: 0.0305908
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1084
+      parentUniqueId: Assembly-CSharp-Editor.dll/Flying/Editor/Tests/Flying/[Assembly-CSharp-Editor][Flying.Editor.Tests.Flying.FlyingAgentTest][suite]
+    - id: 1088
+      uniqueId: Assembly-CSharp-Editor.dll/Flying/Editor/Tests/Flying/FlyingAgentTest/[Assembly-CSharp-Editor][Flying.Editor.Tests.Flying.FlyingAgentTest.agent_step]
+      name: agent_step
+      fullName: Flying.Editor.Tests.Flying.FlyingAgentTest.agent_step
+      resultStatus: 1
+      duration: 0.000906
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1084
+      parentUniqueId: Assembly-CSharp-Editor.dll/Flying/Editor/Tests/Flying/[Assembly-CSharp-Editor][Flying.Editor.Tests.Flying.FlyingAgentTest][suite]
+    - id: 1087
+      uniqueId: Assembly-CSharp-Editor.dll/Flying/Editor/Tests/Flying/[Assembly-CSharp-Editor][Flying.Editor.Tests.Flying.FlyingAreaTest][suite]
+      name: FlyingAreaTest
+      fullName: Flying.Editor.Tests.Flying.FlyingAreaTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1112
+      parentUniqueId: Assembly-CSharp-Editor.dll/Flying/Editor/Tests/[Flying.Editor.Tests.Flying][suite]
+    - id: 1088
+      uniqueId: Assembly-CSharp-Editor.dll/Flying/Editor/Tests/Flying/FlyingAreaTest/[Assembly-CSharp-Editor][Flying.Editor.Tests.Flying.FlyingAreaTest.validate]
+      name: validate
+      fullName: Flying.Editor.Tests.Flying.FlyingAreaTest.validate
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: Assembly-CSharp-Editor.dll/Flying/Editor/Tests/Flying/[Assembly-CSharp-Editor][Flying.Editor.Tests.Flying.FlyingAreaTest][suite]
+    - id: 1076
+      uniqueId: Assembly-CSharp-Editor.dll/Flying/Editor/Tests/[Assembly-CSharp-Editor][Flying.Editor.Tests.StepableAcademyTest][suite]
+      name: StepableAcademyTest
+      fullName: Flying.Editor.Tests.StepableAcademyTest
+      resultStatus: 1
+      duration: 0.0435786
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1100
+      parentUniqueId: Assembly-CSharp-Editor.dll/Flying/Editor/[Flying.Editor.Tests][suite]
+    - id: 1077
+      uniqueId: Assembly-CSharp-Editor.dll/Flying/Editor/Tests/StepableAcademyTest/[Assembly-CSharp-Editor][Flying.Editor.Tests.StepableAcademyTest.academy_create]
+      name: academy_create
+      fullName: Flying.Editor.Tests.StepableAcademyTest.academy_create
+      resultStatus: 1
+      duration: 0.0035394
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1076
+      parentUniqueId: Assembly-CSharp-Editor.dll/Flying/Editor/Tests/[Assembly-CSharp-Editor][Flying.Editor.Tests.StepableAcademyTest][suite]
+    - id: 1078
+      uniqueId: Assembly-CSharp-Editor.dll/Flying/Editor/Tests/StepableAcademyTest/[Assembly-CSharp-Editor][Flying.Editor.Tests.StepableAcademyTest.academy_reset]
+      name: academy_reset
+      fullName: Flying.Editor.Tests.StepableAcademyTest.academy_reset
+      resultStatus: 1
+      duration: 0.0009752
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1076
+      parentUniqueId: Assembly-CSharp-Editor.dll/Flying/Editor/Tests/[Assembly-CSharp-Editor][Flying.Editor.Tests.StepableAcademyTest][suite]
+    - id: 1077
+      uniqueId: Assembly-CSharp-Editor.dll/Flying/Editor/Tests/StepableAcademyTest/[Assembly-CSharp-Editor][Flying.Editor.Tests.StepableAcademyTest.academy_step]
+      name: academy_step
+      fullName: Flying.Editor.Tests.StepableAcademyTest.academy_step
+      resultStatus: 1
+      duration: 0.0007577
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1076
+      parentUniqueId: Assembly-CSharp-Editor.dll/Flying/Editor/Tests/[Assembly-CSharp-Editor][Flying.Editor.Tests.StepableAcademyTest][suite]
+    - id: 1080
+      uniqueId: Assembly-CSharp-Editor.dll/Flying/Editor/Tests/StepableAcademyTest/[Assembly-CSharp-Editor][Flying.Editor.Tests.StepableAcademyTest.reset_when_max_step_reached]
+      name: reset_when_max_step_reached
+      fullName: Flying.Editor.Tests.StepableAcademyTest.reset_when_max_step_reached
+      resultStatus: 1
+      duration: 0.0004361
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1076
+      parentUniqueId: Assembly-CSharp-Editor.dll/Flying/Editor/Tests/[Assembly-CSharp-Editor][Flying.Editor.Tests.StepableAcademyTest][suite]
+    - id: 1081
+      uniqueId: Assembly-CSharp-Editor.dll/Flying/Editor/Tests/StepableAcademyTest/[Assembly-CSharp-Editor][Flying.Editor.Tests.StepableAcademyTest.when_reset_areas_are_reset]
+      name: when_reset_areas_are_reset
+      fullName: Flying.Editor.Tests.StepableAcademyTest.when_reset_areas_are_reset
+      resultStatus: 1
+      duration: 0.0036879
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1076
+      parentUniqueId: Assembly-CSharp-Editor.dll/Flying/Editor/Tests/[Assembly-CSharp-Editor][Flying.Editor.Tests.StepableAcademyTest][suite]
+    - id: 1082
+      uniqueId: Assembly-CSharp-Editor.dll/Flying/Editor/Tests/[Assembly-CSharp-Editor][Flying.Editor.Tests.StepableAreaTest][suite]
+      name: StepableAreaTest
+      fullName: Flying.Editor.Tests.StepableAreaTest
+      resultStatus: 1
+      duration: 0.0151671
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1106
+      parentUniqueId: Assembly-CSharp-Editor.dll/Flying/Editor/[Flying.Editor.Tests][suite]
+    - id: 1083
+      uniqueId: Assembly-CSharp-Editor.dll/Flying/Editor/Tests/StepableAreaTest/[Assembly-CSharp-Editor][Flying.Editor.Tests.StepableAreaTest.area_create]
+      name: area_create
+      fullName: Flying.Editor.Tests.StepableAreaTest.area_create
+      resultStatus: 1
+      duration: 0.0004797
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1082
+      parentUniqueId: Assembly-CSharp-Editor.dll/Flying/Editor/Tests/[Assembly-CSharp-Editor][Flying.Editor.Tests.StepableAreaTest][suite]
+    m_ResultText: FlyingAgentTest (0,068s)
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 5d0aa017
+      m_LastClickedID: 396364381
+      m_ExpandedIDs: de1f138fc714bca2adbd83ad53010cc66d15a6d733b7b6d853b12de3eaf720f21ad56ff4fb0fadf4a2cc43f72c305ffe67d222046724f40a4610c80bb6861d14808bf8145d0aa017d85d1a19826acb26ed00492ce1482e335df33b338f3c1c43b25aba4a808d545ae224d85bdb4be2626b802967044b5b6bffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized
+--- !u!114 &23
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12003, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Console
+    m_Image: {fileID: 111653112392082826, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0.4
+    y: 665.60004
+    width: 1138
+    height: 126
+  m_ViewDataDictionary: {fileID: 0}
+--- !u!114 &24
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12071, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Animation
+    m_Image: {fileID: 1561878555887300916, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 595.2
+    width: 1075
+    height: 190
+  m_ViewDataDictionary: {fileID: 0}
+  m_LockTracker:
+    m_IsLocked: 0
+  m_LastSelectedObjectID: -28646
+--- !u!114 &25
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Inspector
+    m_Image: {fileID: -6905738622615590433, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1138.4
+    y: 78.4
+    width: 396
+    height: 713
+  m_ViewDataDictionary: {fileID: 0}
+  m_OpenAddComponentMenu: 0
+  m_ObjectsLockedBeforeSerialization: []
+  m_InstanceIDsLockedBeforeSerialization: 
+  m_LockTracker:
+    m_IsLocked: 0
+  m_PreviewResizer:
+    m_CachedPref: 160
+    m_ControlHash: -371814159
+    m_PrefName: Preview_InspectorPreview
+  m_PreviewWindow: {fileID: 0}
+  m_LastInspectedObjectInstanceID: -1
+  m_LastVerticalScrollValue: 0

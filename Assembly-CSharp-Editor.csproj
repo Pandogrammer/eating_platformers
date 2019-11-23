@@ -60,6 +60,9 @@
      <Compile Include="Assets\Comedor\Editor\Tests\EaterTest.cs" />
      <Compile Include="Assets\Comedor\Editor\Tests\FoodTest.cs" />
      <Compile Include="Assets\Comedor\Editor\Tests\GameTest.cs" />
+     <Compile Include="Assets\Flying\Editor\Tests\Flying\FlyingAgentTest.cs" />
+     <Compile Include="Assets\Flying\Editor\Tests\Flying\FlyingAreaTest.cs" />
+     <Compile Include="Assets\Flying\Editor\Tests\TesteableAgent.cs" />
  <Reference Include="UnityEditor.TestRunner">
  <HintPath>C:/Users/Farguito/Documents/Unity Projects/Un Poco de IA/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>

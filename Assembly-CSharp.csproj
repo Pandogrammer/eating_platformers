@@ -96,10 +96,12 @@
      <Compile Include="Assets\Flying\Scripts\Float\FloatingAcademy.cs" />
      <Compile Include="Assets\Flying\Scripts\Float\FloatingAgent.cs" />
      <Compile Include="Assets\Flying\Scripts\Float\FloatingArea.cs" />
-     <Compile Include="Assets\Flying\Scripts\Fly\FlyingAcademy.cs" />
-     <Compile Include="Assets\Flying\Scripts\Fly\FlyingAgent.cs" />
+     <Compile Include="Assets\Flying\Scripts\Fly\FlyingAgentModel.cs" />
      <Compile Include="Assets\Flying\Scripts\Fly\FlyingArea.cs" />
-     <Compile Include="Assets\Flying\Scripts\Fly\FlyingBehaviour.cs" />
+     <Compile Include="Assets\Flying\Scripts\Fly\Unity\UnityFlyingAcademy.cs" />
+     <Compile Include="Assets\Flying\Scripts\Fly\Unity\UnityFlyingAgent.cs" />
+     <Compile Include="Assets\Flying\Scripts\Fly\Unity\UnityFlyingArea.cs" />
+     <Compile Include="Assets\Flying\Scripts\Stepable\StepableArea.cs" />
      <Compile Include="Assets\Platformer\Scripts\PlatformerAcademy.cs" />
      <Compile Include="Assets\Platformer\Scripts\PlatformerAgent.cs" />
      <Compile Include="Assets\Platformer\Scripts\PlatformerArea.cs" />

@@ -17,13 +17,6 @@ namespace Flying.Scripts.Float
             agent.AddReward(reward);
         }
 
-        public override void ResetArea()
-        {
-            agent.Done();
-            agent.Reset(respawnPoint.position
-                , Vector3.zero);
-        }
-
         public void ChangeArea(float impulseSpeed, float maxY, float minY)
         {
             agent.SetParameters(impulseSpeed, maxY, minY);
@@ -41,7 +34,14 @@ namespace Flying.Scripts.Float
 
             var reward = -1f;
             agent.SetReward(reward);
-            ResetArea();
+            Reset();
+        }
+
+        public void Reset()
+        {
+            agent.Done();
+            agent.Reset(respawnPoint.position
+                , Vector3.zero);
         }
 
         public void OnCollisionEnter(Collision other)

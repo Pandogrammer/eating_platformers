@@ -77,6 +77,15 @@
           </e>
         </e>
         <e p="Flying" t="Include">
+          <e p="Editor" t="Include">
+            <e p="Tests" t="Include">
+              <e p="Flying" t="Include">
+                <e p="FlyingAgentTest.cs" t="Include" />
+                <e p="FlyingAreaTest.cs" t="Include" />
+              </e>
+              <e p="TesteableAgent.cs" t="Include" />
+            </e>
+          </e>
           <e p="Scripts" t="Include">
             <e p="CollisionReceiver.cs" t="Include" />
             <e p="CollisionTransmiter.cs" t="Include" />
@@ -86,10 +95,16 @@
               <e p="FloatingArea.cs" t="Include" />
             </e>
             <e p="Fly" t="Include">
-              <e p="FlyingAcademy.cs" t="Include" />
-              <e p="FlyingAgent.cs" t="Include" />
+              <e p="FlyingAgentModel.cs" t="Include" />
               <e p="FlyingArea.cs" t="Include" />
-              <e p="FlyingBehaviour.cs" t="Include" />
+              <e p="Unity" t="Include">
+                <e p="UnityFlyingAcademy.cs" t="Include" />
+                <e p="UnityFlyingAgent.cs" t="Include" />
+                <e p="UnityFlyingArea.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Stepable" t="Include">
+              <e p="StepableArea.cs" t="Include" />
             </e>
           </e>
         </e>

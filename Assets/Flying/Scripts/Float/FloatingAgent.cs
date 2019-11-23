@@ -5,10 +5,14 @@ namespace Flying.Scripts.Float
 {
     public class FloatingAgent : Agent
     {
+
         [SerializeField] private Rigidbody body;
-        [SerializeField] private float impulseSpeed = Random.Range(1f, 2f);
-        [SerializeField] private float maxY = Random.Range(2f, 10f);
-        [SerializeField] private float minY = Random.Range(-10f, -2f);
+        [Header("1 : 2")]
+        [SerializeField] private float impulseSpeed;
+        [Header("2 : 10")]
+        [SerializeField] private float maxY;
+        [Header("-10 : -2")]
+        [SerializeField] private float minY;
 
         private BehaviorParameters behaviorParameters;
 

@@ -16,7 +16,7 @@ public class FollowChildPosition : MonoBehaviour
         originalLocalPosition = follow.localPosition;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
 //        var followLocalPosition = follow.localPosition;
 //        var x = FollowAxis(followLocalPosition.x, originalLocalPosition.x, FreezeX);
@@ -26,7 +26,7 @@ public class FollowChildPosition : MonoBehaviour
 //        follow.localPosition = new Vector3(x[0], y[0], z[0]);
 //        originalLocalPosition = new Vector3(x[1], y[1], z[1]);
 
-        if (!(Vector3.Distance(follow.localPosition, originalLocalPosition) > 0.01f)) return;
+        if (follow.localPosition == originalLocalPosition) return;
         
         transform.localPosition += follow.localPosition - originalLocalPosition;
         follow.localPosition = originalLocalPosition;
