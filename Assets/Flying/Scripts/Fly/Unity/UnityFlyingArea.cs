@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Experimental.PlayerLoop;
 
 namespace Flying.Scripts.Fly.Unity
 {
@@ -27,7 +26,7 @@ namespace Flying.Scripts.Fly.Unity
             var initialPosition = spawnPosition.localPosition;
             var targetPosition = target.localPosition;
             agent = FlyingAgent.Create(initialPosition, targetPosition, moveSpeed);
-            area = FlyingArea.Create(agent, targetPosition, 
+            area = FlyingArea.Create(agent, targetPosition,
                 distanceReward: 0.01f, distancePunish: -0.01f, doneReward: 1f, failReward: -1f);
             ResetUnityAgent(initialPosition);
         }
@@ -37,7 +36,7 @@ namespace Flying.Scripts.Fly.Unity
             var newPosition = unityAgent.transform.localPosition;
             var newVelocity = unityAgent.body.velocity;
             var newTargetPosition = target.localPosition;
-            agent = FlyingAgent.Update(agent, newPosition, newTargetPosition, velocity: newVelocity);
+            agent = FlyingAgent.Update(agent, newPosition, newTargetPosition, velocity: newVelocity, speed: moveSpeed);
             area = FlyingArea.Update(area, agent, newTargetPosition);
             area = FlyingArea.UpdateDoneBasedOnValidate(area);
             if (area.done)
@@ -64,7 +63,9 @@ namespace Flying.Scripts.Fly.Unity
 
         private bool AgentOutOfBounds()
         {
-            return agent.position.y < -10f || agent.position.y > 30f;
+            var targetY = target.position.y;
+            var agentY = agent.position.y;
+            return agentY < targetY - 50f || agentY > targetY + 50f;
         }
 
         private void AgentFail()
@@ -101,7 +102,7 @@ namespace Flying.Scripts.Fly.Unity
             area = FlyingArea.Update(area, agent, targetPosition);
             ResetUnityAgent(initialPosition);
         }
-        
+
         private void ResetUnityAgent(Vector3 initialPosition)
         {
             unityAgent.transform.localPosition = initialPosition;

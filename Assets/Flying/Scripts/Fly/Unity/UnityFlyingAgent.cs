@@ -21,6 +21,7 @@ namespace Flying.Scripts.Fly.Unity
             AddVectorObs(model.position.y);
             AddVectorObs(model.velocity.y);
             AddVectorObs(model.target.y);
+            AddVectorObs(model.speed);
         }
 
         public override void AgentAction(float[] vectorAction, string textAction)
