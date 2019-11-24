@@ -9,7 +9,7 @@ namespace Flying.Scripts.Fly.Unity
 
         private BehaviorParameters behaviorParameters;
         private UnityFlyingArea area;
-        private FlyingAgentModel model => area.agentModel;
+        private FlyingAgentModel model => area.agent;
         public override void InitializeAgent()
         {
             area = GetComponentInParent<UnityFlyingArea>();

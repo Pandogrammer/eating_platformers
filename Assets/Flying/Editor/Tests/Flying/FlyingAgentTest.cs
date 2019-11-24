@@ -25,7 +25,7 @@ namespace Flying.Editor.Tests.Flying
             var moveSpeed = 1f;
             var agent = FlyingAgent.Create(initialPosition, initialPosition, moveSpeed);
 
-            var result = FlyingAgent.Move(agent, initialPosition + Vector3.up, Vector3.zero);
+            var result = FlyingAgent.Update(agent, initialPosition + Vector3.up, velocity: Vector3.zero);
 
             Assert.AreEqual(new Vector3(0, 1, 0), result.position);
         }

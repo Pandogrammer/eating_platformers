@@ -1,3 +1,10 @@
+.idea
 Temp/
 Library/metadata
+Library/StateCache
+Library/ScriptAssemblies
+Library/assetDatabase3
+Library/ProtocolInstance.json
 obj/Debug/
+csharp_timers.json
+Assembly-CSharp.csproj

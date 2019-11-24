@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Experimental.PlayerLoop;
 
 namespace Flying.Scripts.Fly.Unity
 {
@@ -9,26 +10,39 @@ namespace Flying.Scripts.Fly.Unity
         [SerializeField] private float moveSpeed;
         private int step;
         private int stepsInsideTarget;
-        private FlyingAreaModel model;
-        private UnityFlyingAgent agent;
-        public FlyingAgentModel agentModel { get; private set; }
+        public FlyingAgentModel agent { get; private set; }
+        private FlyingAreaModel area;
+
+        private UnityFlyingAgent unityAgent;
 
         public void Awake()
         {
-            agent = GetComponentInChildren<UnityFlyingAgent>();
-            Reset();
+            unityAgent = GetComponentInChildren<UnityFlyingAgent>();
+            Initialize();
+        }
+
+        private void Initialize()
+        {
+            step = 0;
+            var initialPosition = spawnPosition.localPosition;
+            var targetPosition = target.localPosition;
+            agent = FlyingAgent.Create(initialPosition, targetPosition, moveSpeed);
+            area = FlyingArea.Create(agent, targetPosition, 
+                distanceReward: 0.01f, distancePunish: -0.01f, doneReward: 1f, failReward: -1f);
+            ResetUnityAgent(initialPosition);
         }
 
         public void Step(int maxSteps)
         {
-            var newPosition = agent.transform.localPosition;
-            var newVelocity = agent.body.velocity;
-            agentModel = FlyingAgent.Move(agentModel, newPosition, newVelocity);
-            model = FlyingArea.UpdateAgentModel(model, agentModel);
-            model = FlyingArea.CheckIfAgentDone(model);
-            if (model.done)
+            var newPosition = unityAgent.transform.localPosition;
+            var newVelocity = unityAgent.body.velocity;
+            var newTargetPosition = target.localPosition;
+            agent = FlyingAgent.Update(agent, newPosition, newTargetPosition, velocity: newVelocity);
+            area = FlyingArea.Update(area, agent, newTargetPosition);
+            area = FlyingArea.UpdateDoneBasedOnValidate(area);
+            if (area.done)
             {
-                agent.AddReward(2f / maxSteps);
+                unityAgent.AddReward(2f / maxSteps);
                 stepsInsideTarget += 1;
                 if (stepsInsideTarget > 150)
                 {
@@ -44,49 +58,54 @@ namespace Flying.Scripts.Fly.Unity
             {
                 stepsInsideTarget = 0;
             }
-            
+
             AgentStep(maxSteps);
         }
 
         private bool AgentOutOfBounds()
         {
-            return agentModel.position.y < -10f || agentModel.position.y > 30f;
+            return agent.position.y < -10f || agent.position.y > 30f;
         }
 
         private void AgentFail()
         {
-            agent.SetReward(-1f);
-            agent.Done();
+            unityAgent.SetReward(area.failReward);
+            unityAgent.Done();
             Reset();
         }
 
         private void AgentDone()
         {
-            agent.SetReward(1f);
-            agent.Done();
+            unityAgent.SetReward(area.doneReward);
+            unityAgent.Done();
             Reset();
         }
 
         private void AgentStep(int maxSteps)
         {
             //model = FlyingArea.UpdateNextRewardBasedOnPosition(model, agentModel.position);
-            var distanceReward = Vector3.Distance(model.agent.position, model.target);
-            agent.AddReward((-1f * distanceReward) / (maxSteps * 100));
+            var distanceReward = Vector3.Distance(area.agent.position, area.target);
+            unityAgent.AddReward((-1f * distanceReward) / (maxSteps * 100));
             //agent.AddReward(-1f / maxSteps);
 
             step += 1;
             if (step > maxSteps) Reset();
         }
 
-        public void Reset()
+        private void Reset()
         {
             step = 0;
             var initialPosition = spawnPosition.localPosition;
             var targetPosition = target.localPosition;
-            agent.transform.localPosition = initialPosition;
-            agent.body.velocity = Vector3.zero;
-            agentModel = FlyingAgent.Create(initialPosition, targetPosition, moveSpeed);
-            model = FlyingArea.Create(agentModel, targetPosition, 0.01f, -0.01f);
+            agent = FlyingAgent.Update(agent, initialPosition, targetPosition);
+            area = FlyingArea.Update(area, agent, targetPosition);
+            ResetUnityAgent(initialPosition);
+        }
+        
+        private void ResetUnityAgent(Vector3 initialPosition)
+        {
+            unityAgent.transform.localPosition = initialPosition;
+            unityAgent.body.velocity = Vector3.zero;
         }
     }
 }
