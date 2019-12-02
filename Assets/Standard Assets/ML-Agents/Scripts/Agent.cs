@@ -388,8 +388,8 @@ namespace MLAgents
         /// <param name="increment">Incremental reward value.</param>
         public void AddReward(float increment)
         {
-            m_Reward += increment;
             m_CumulativeReward += increment;
+            m_Reward += increment;
         }
 
         /// <summary>

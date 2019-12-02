@@ -12,7 +12,7 @@ namespace Flying.Editor.Tests.Flying
             var initialPosition = new Vector3(0, 0, 0);
             var moveSpeed = 1f;
 
-            var agent = FlyingAgent.Create(initialPosition, initialPosition, moveSpeed);
+            var agent = FlyingAgent.Create(position: initialPosition, target: initialPosition, speed: moveSpeed);
 
             Assert.AreEqual(initialPosition, agent.position);
             Assert.AreEqual(moveSpeed, agent.speed);
@@ -23,7 +23,7 @@ namespace Flying.Editor.Tests.Flying
         {
             var initialPosition = new Vector3(0, 0, 0);
             var moveSpeed = 1f;
-            var agent = FlyingAgent.Create(initialPosition, initialPosition, moveSpeed);
+            var agent = FlyingAgent.Create(position: initialPosition, target: initialPosition, speed: moveSpeed);
 
             var result = FlyingAgent.Update(agent, initialPosition + Vector3.up, velocity: Vector3.zero);
 

@@ -15,7 +15,7 @@ public class FollowRotation : MonoBehaviour
         originalLocalRotation = follow.localRotation;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if(!FreezeX)
             follow.RotateAround(follow.localPosition, follow.right, -originalLocalRotation.eulerAngles.x);

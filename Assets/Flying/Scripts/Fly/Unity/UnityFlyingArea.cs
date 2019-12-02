@@ -1,14 +1,17 @@
+using Flying.Scripts.Stepable;
 using UnityEngine;
+using UnityEngine.Experimental.PlayerLoop;
 
 namespace Flying.Scripts.Fly.Unity
 {
-    public class UnityFlyingArea : MonoBehaviour
+    public class UnityFlyingArea : UnityStepableArea
     {
         [SerializeField] private Transform spawnPosition;
         [SerializeField] private Transform target;
         [SerializeField] private float moveSpeed;
         private int step;
         private int stepsInsideTarget;
+        private LevelParameters levelParameters;
         public FlyingAgentModel agent { get; private set; }
         private FlyingAreaModel area;
 
@@ -23,53 +26,78 @@ namespace Flying.Scripts.Fly.Unity
         private void Initialize()
         {
             step = 0;
+            stepsInsideTarget = 0;
+            levelParameters = LevelParameters.Create(100, 30f, 1f);
+            
             var initialPosition = spawnPosition.localPosition;
             var targetPosition = target.localPosition;
-            agent = FlyingAgent.Create(initialPosition, targetPosition, moveSpeed);
-            area = FlyingArea.Create(agent, targetPosition,
-                distanceReward: 0.01f, distancePunish: -0.01f, doneReward: 1f, failReward: -1f);
-            ResetUnityAgent(initialPosition);
+            agent = FlyingAgent.Create(initialPosition, target: targetPosition, speed: moveSpeed);
+            area = FlyingArea.Create(agent, targetPosition, doneReward: 2f, failReward: -2f);
+            ResetUnityEntities(initialPosition, targetPosition);
         }
 
-        public void Step(int maxSteps)
+        public override void Step(int maxSteps)
         {
+            step += 1;
             var newPosition = unityAgent.transform.localPosition;
+            var newRotation = unityAgent.body.rotation.eulerAngles;
             var newVelocity = unityAgent.body.velocity;
             var newTargetPosition = target.localPosition;
-            agent = FlyingAgent.Update(agent, newPosition, newTargetPosition, velocity: newVelocity, speed: moveSpeed);
-            area = FlyingArea.Update(area, agent, newTargetPosition);
-            area = FlyingArea.UpdateDoneBasedOnValidate(area);
-            if (area.done)
-            {
-                unityAgent.AddReward(2f / maxSteps);
-                stepsInsideTarget += 1;
-                if (stepsInsideTarget > 150)
-                {
-                    stepsInsideTarget = 0;
-                    AgentDone();
-                }
-            }
-            else if (AgentOutOfBounds())
-            {
+            var isInsideArea = FlyingArea.IsInsideArea(area);
+            agent = FlyingAgent.Update(agent, newPosition, newTargetPosition, newRotation, velocity: newVelocity,
+                speed: moveSpeed);
+            area = FlyingArea.Update(area, agent, newTargetPosition, isInsideArea);
+
+            if (!isInsideArea)
+                AgentOutsideArea(maxSteps);
+            if (isInsideArea)
+                AgentInsideArea(maxSteps);
+            if (AgentOutOfBounds())
                 AgentFail();
-            }
-            else
-            {
-                stepsInsideTarget = 0;
-            }
+            if (step > maxSteps)
+                TimeUp();
 
             AgentStep(maxSteps);
         }
 
-        private bool AgentOutOfBounds()
+
+        private void AgentOutsideArea(int maxSteps)
         {
-            var targetY = target.position.y;
-            var agentY = agent.position.y;
-            return agentY < targetY - 50f || agentY > targetY + 50f;
+            if (unityAgent.IsDone()) return;
+            stepsInsideTarget = 0;
+            var proportionalDistance = Vector3.Distance(area.agent.position, area.target) / levelParameters.maxDistance;
+            var rewardModifier = area.failReward / 2 / maxSteps;
+            var outsideAreaReward = proportionalDistance * rewardModifier;
+            unityAgent.AddReward(outsideAreaReward);
         }
 
+        private void AgentInsideArea(int maxSteps)
+        {
+            if (unityAgent.IsDone()) return;
+            stepsInsideTarget += 1;
+
+            var insideAreaReward = area.doneReward / maxSteps;
+            unityAgent.AddReward(insideAreaReward);
+
+            if (stepsInsideTarget > 100) AgentDone();
+        }
+
+        private bool AgentOutOfBounds()
+        {
+            var targetPosition = area.target;
+            var agentPosition = area.agent.position;
+            return Vector3.Distance(targetPosition, agentPosition) > levelParameters.maxDistance;
+        }
+
+        private void TimeUp()
+        {
+            unityAgent.Done();
+            Reset();
+        }
+        
         private void AgentFail()
         {
+            if (unityAgent.IsDone()) return;
             unityAgent.SetReward(area.failReward);
             unityAgent.Done();
             Reset();
@@ -77,36 +105,85 @@ namespace Flying.Scripts.Fly.Unity
 
         private void AgentDone()
         {
+            if (unityAgent.IsDone()) return;
             unityAgent.SetReward(area.doneReward);
             unityAgent.Done();
-            Reset();
+            levelParameters = levelParameters.AdvanceLevel();
+            Reset(true);
         }
 
         private void AgentStep(int maxSteps)
         {
-            //model = FlyingArea.UpdateNextRewardBasedOnPosition(model, agentModel.position);
-            var distanceReward = Vector3.Distance(area.agent.position, area.target);
-            unityAgent.AddReward((-1f * distanceReward) / (maxSteps * 100));
-            //agent.AddReward(-1f / maxSteps);
-
-            step += 1;
-            if (step > maxSteps) Reset();
+            if (unityAgent.IsDone()) return;
+            var stepReward = area.failReward / 2 / maxSteps;
+            unityAgent.AddReward(stepReward);
         }
 
-        private void Reset()
+        private void Reset(bool changeTargetPosition = false)
         {
             step = 0;
+            stepsInsideTarget = 0;
             var initialPosition = spawnPosition.localPosition;
-            var targetPosition = target.localPosition;
+            var targetLocalPosition = target.localPosition;
+            var targetPosition = changeTargetPosition
+                ? GenerateNewTargetPosition(initialPosition)
+                : targetLocalPosition;
+
             agent = FlyingAgent.Update(agent, initialPosition, targetPosition);
             area = FlyingArea.Update(area, agent, targetPosition);
-            ResetUnityAgent(initialPosition);
+            ResetUnityEntities(initialPosition, targetPosition);
         }
 
-        private void ResetUnityAgent(Vector3 initialPosition)
+        private Vector3 GenerateNewTargetPosition(Vector3 initialPosition)
+        { 
+            var newPosition = new Vector3(
+                (initialPosition.x + randomDistance),
+                (initialPosition.y + randomDistance),
+                (initialPosition.z + randomDistance));
+
+            return newPosition;
+        }
+
+        private float randomDistance => Random.Range(-levelParameters.targetDistanceFromSpawn, levelParameters.targetDistanceFromSpawn);
+
+        private void ResetUnityEntities(Vector3 initialPosition, Vector3 targetPosition)
         {
+            target.localPosition = targetPosition;
             unityAgent.transform.localPosition = initialPosition;
             unityAgent.body.velocity = Vector3.zero;
+            unityAgent.body.rotation = Quaternion.identity;
+        }
+    }
+
+    internal struct LevelParameters
+    {
+        public readonly int stepsInsideTarget;
+        public readonly float maxDistance;
+        public readonly float targetDistanceFromSpawn;
+
+        private LevelParameters(
+            int stepsInsideTarget,
+            float maxDistance,
+            float targetDistanceFromSpawn)
+        {
+            this.stepsInsideTarget = stepsInsideTarget;
+            this.maxDistance = maxDistance;
+            this.targetDistanceFromSpawn = targetDistanceFromSpawn;
+        }
+
+        public static LevelParameters Create(int initialStepsInsideTarget, float initialMaxDistance, float initialTargetDistanceFromSpawn)
+        {
+            return new LevelParameters(initialStepsInsideTarget, 
+                initialMaxDistance, 
+                initialTargetDistanceFromSpawn);
+        }
+
+        public LevelParameters AdvanceLevel()
+        {
+            var stepsInsideTarget = this.stepsInsideTarget + 5;
+            var maxDistance = this.maxDistance + 0.1f;
+            var targetDistanceFromSpawn = this.targetDistanceFromSpawn + 0.1f;
+            return new LevelParameters(stepsInsideTarget, maxDistance, targetDistanceFromSpawn);
         }
     }
 }
