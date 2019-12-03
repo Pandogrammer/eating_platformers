@@ -1,6 +1,6 @@
 .idea
 Temp/
 Library/
-obj/Debug/
+obj/
 csharp_timers.json
 Assembly-CSharp.csproj
