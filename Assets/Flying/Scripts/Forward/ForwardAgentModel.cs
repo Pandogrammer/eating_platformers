@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ForwardAgentModel
+public struct ForwardAgentModel
 {
     public float speed;
     public Vector3 position;
