@@ -10,7 +10,7 @@ public class UnityForwardAgent : Agent
     
     private BehaviorParameters behaviorParameters;
     private UnityForwardArea area;
-    private ForwardAgentModel model => area.agent;
+    private ForwardAgent.ForwardAgentModel model => area.agent;
     public override void InitializeAgent()
     {
         area = GetComponentInParent<UnityForwardArea>();
@@ -35,7 +35,7 @@ public class UnityForwardAgent : Agent
 
         private void ContinuousActions(float[] act)
         {
-            var impulseForward = Mathf.Clamp(act[1], -1f, 1f);
+            var impulseForward = Mathf.Clamp(act[0], -1f, 1f);
             ImpulseForward(model.speed * impulseForward);
         }
 
