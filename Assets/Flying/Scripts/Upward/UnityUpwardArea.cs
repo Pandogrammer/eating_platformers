@@ -3,21 +3,20 @@ using Flying.Scripts.Fly;
 using Flying.Scripts.Stepable;
 using UnityEngine;
 
-public class UnityForwardArea : UnityStepableArea
+public class UnityUpwardArea : UnityStepableArea
 {
     [SerializeField] private Transform spawnPosition;
     [SerializeField] private Transform target;
     [SerializeField] private float moveSpeed;
-
     [SerializeField] private float doneReward;
     [SerializeField] private bool distanceReward;
-    public ForwardAgent.ForwardAgentModel agent { get; private set; }
+    public UpwardAgent.UpwardAgentModel agent { get; private set; }
     private int step;
-    private UnityForwardAgent unityAgent;
+    private UnityUpwardAgent unityAgent;
 
     public void Awake()
     {
-        unityAgent = GetComponentInChildren<UnityForwardAgent>();
+        unityAgent = GetComponentInChildren<UnityUpwardAgent>();
         Initialize();
     }
 
@@ -25,13 +24,11 @@ public class UnityForwardArea : UnityStepableArea
     {
         step += 1;
 
-
         var position = unityAgent.body.transform.localPosition;
         var targetPosition = target.localPosition;
         var velocity = unityAgent.body.velocity;
         
-        agent = ForwardAgent.Update(agent, position, targetPosition, velocity);
-        
+        agent = UpwardAgent.Update(agent, position, targetPosition, velocity);
         var distanceToTarget = Math.Abs(Vector3.Distance(targetPosition, position));
         
         if (HasReachedTarget(distanceToTarget))
@@ -59,7 +56,7 @@ public class UnityForwardArea : UnityStepableArea
         if (unityAgent.IsDone()) return;
         unityAgent.SetReward(doneReward);
         unityAgent.Done();
-        Reset();
+        Reset(true);
     }
 
     private void AgentStep(int maxSteps, float distanceToTarget)
@@ -76,19 +73,20 @@ public class UnityForwardArea : UnityStepableArea
         var initialPosition = spawnPosition.localPosition;
         var targetPosition = target.localPosition;
 
-        agent = ForwardAgent.Create(initialPosition, targetPosition, moveSpeed);
+        agent = UpwardAgent.Create(initialPosition, targetPosition, moveSpeed);
         ResetUnityEntities(initialPosition, targetPosition);
     }
 
-    private void Reset()
+    private void Reset(bool changePosition = false)
     {
         step = 0;
         var initialPosition = spawnPosition.localPosition;
-        var initialVelocity = Vector3.zero;
+        var initialVelocity = Vector3.zero; 
         var targetPosition = target.localPosition;
-        targetPosition.z *= -1f;
         
-        agent = ForwardAgent.Update(agent, initialPosition, targetPosition, initialVelocity);
+        if(changePosition) targetPosition.y *= -1f;
+        
+        agent = UpwardAgent.Update(agent, initialPosition, targetPosition, initialVelocity);
         ResetUnityEntities(initialPosition, targetPosition);
     }
 

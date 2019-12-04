@@ -23,8 +23,9 @@ public static class ForwardAgent
         return new ForwardAgentModel(speed, initialPosition, Vector3.zero, target);
     }
 
-    public static ForwardAgentModel Update(ForwardAgentModel agent, Vector3 position, Vector3 targetPosition)
+    public static ForwardAgentModel Update(ForwardAgentModel agent, Vector3 position, 
+        Vector3 targetPosition, Vector3 velocity)
     {
-        return new ForwardAgentModel(agent.speed, position, Vector3.zero, targetPosition);
+        return new ForwardAgentModel(agent.speed, position, velocity, targetPosition);
     }
 }
