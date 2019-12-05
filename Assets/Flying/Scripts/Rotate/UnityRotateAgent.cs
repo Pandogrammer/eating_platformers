@@ -10,10 +10,9 @@ namespace Flying.Scripts.Rotate
     
         private BehaviorParameters behaviorParameters;
         private UnityRotateArea area;
-        private RotateAgent.RotateAgentModel model => area.agent;
+        public RotateAgent.RotateAgentModel model;
         public override void InitializeAgent()
         {
-            area = GetComponentInParent<UnityRotateArea>();
             behaviorParameters = GetComponent<BehaviorParameters>();
         }
 

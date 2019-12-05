@@ -15,7 +15,7 @@ namespace Flying.Scripts.Rotate
         private int stepsFacing = 0; 
         [SerializeField] private float facingDistance = 0.95f;
         [SerializeField] private float facingRewardDistance = 0.99f;
-        public RotateAgent.RotateAgentModel agent { get; private set; }
+
         private int step;
         private int initialTurnDirection;
         private UnityRotateAgent unityAgent;
@@ -38,7 +38,7 @@ namespace Flying.Scripts.Rotate
             var targetPosition = target.localPosition;
             var turnDirection = CalculateTurnDirection(agentBody, targetPosition, agentPosition);
 
-            agent = RotateAgent.Update(agent, agentRotation, targetPosition, agentVelocity, turnDirection);
+            unityAgent.model = RotateAgent.Update(unityAgent.model, agentRotation, targetPosition, agentVelocity, turnDirection);
 
             if (IsFacingTarget(agentBody, targetPosition, agentPosition))
             {
@@ -125,7 +125,7 @@ namespace Flying.Scripts.Rotate
             step = 0;
             var targetPosition = target.localPosition;
 
-            agent = RotateAgent.Create(Quaternion.identity, targetPosition, rotationAngle);
+            unityAgent.model = RotateAgent.Create(Quaternion.identity, targetPosition, rotationAngle);
             ResetUnityEntities(Quaternion.identity, targetPosition);
         }
 
@@ -158,7 +158,7 @@ namespace Flying.Scripts.Rotate
 
             ResetUnityEntities(initialRotation, targetPosition);
 
-            agent = RotateAgent.Update(agent, initialRotation, targetPosition, initialVelocity, initialTurnDirection);
+            unityAgent.model = RotateAgent.Update(unityAgent.model, initialRotation, targetPosition, initialVelocity, initialTurnDirection);
         }
 
         private void ResetUnityEntities(Quaternion initialRotation, Vector3 targetPosition)

@@ -10,10 +10,9 @@ public class UnityForwardAgent : Agent
     
     private BehaviorParameters behaviorParameters;
     private UnityForwardArea area;
-    private ForwardAgent.ForwardAgentModel model => area.agent;
+    public ForwardAgent.ForwardAgentModel model;
     public override void InitializeAgent()
     {
-        area = GetComponentInParent<UnityForwardArea>();
         behaviorParameters = GetComponent<BehaviorParameters>();
     }
     

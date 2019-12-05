@@ -11,7 +11,7 @@ public class UnityForwardArea : UnityStepableArea
 
     [SerializeField] private float doneReward;
     [SerializeField] private bool distanceReward;
-    public ForwardAgent.ForwardAgentModel agent { get; private set; }
+    
     private int step;
     private UnityForwardAgent unityAgent;
 
@@ -25,12 +25,11 @@ public class UnityForwardArea : UnityStepableArea
     {
         step += 1;
 
-
         var position = unityAgent.body.transform.localPosition;
         var targetPosition = target.localPosition;
         var velocity = unityAgent.body.velocity;
         
-        agent = ForwardAgent.Update(agent, position, targetPosition, velocity);
+        unityAgent.model = ForwardAgent.Update(unityAgent.model, position, targetPosition, velocity);
         
         var distanceToTarget = Math.Abs(Vector3.Distance(targetPosition, position));
         
@@ -76,7 +75,7 @@ public class UnityForwardArea : UnityStepableArea
         var initialPosition = spawnPosition.localPosition;
         var targetPosition = target.localPosition;
 
-        agent = ForwardAgent.Create(initialPosition, targetPosition, moveSpeed);
+        unityAgent.model = ForwardAgent.Create(initialPosition, targetPosition, moveSpeed);
         ResetUnityEntities(initialPosition, targetPosition);
     }
 
@@ -88,7 +87,7 @@ public class UnityForwardArea : UnityStepableArea
         var targetPosition = target.localPosition;
         targetPosition.z *= -1f;
         
-        agent = ForwardAgent.Update(agent, initialPosition, targetPosition, initialVelocity);
+        unityAgent.model = ForwardAgent.Update(unityAgent.model, initialPosition, targetPosition, initialVelocity);
         ResetUnityEntities(initialPosition, targetPosition);
     }
 
