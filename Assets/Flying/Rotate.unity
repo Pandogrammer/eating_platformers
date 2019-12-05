@@ -1651,7 +1651,7 @@ PrefabInstance:
     - target: {fileID: 1749991910325084299, guid: 58de1110b2aef8c4ab03e2f151206bda,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1749991910325084292, guid: 58de1110b2aef8c4ab03e2f151206bda,
         type: 3}
@@ -1728,8 +1728,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1240247999, guid: 58de1110b2aef8c4ab03e2f151206bda, type: 3}
-      propertyPath: giveDoneReward
-      value: 0
+      propertyPath: moveSpeed
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58de1110b2aef8c4ab03e2f151206bda, type: 3}
@@ -1823,7 +1823,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1283897013
 Transform:
   m_ObjectHideFlags: 0

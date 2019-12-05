@@ -337,11 +337,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1749991909333904636}
-  moveSpeed: 0.1
+  rotationAngle: 5
   doneReward: 3
   giveRotationReward: 1
   giveDoneReward: 1
   giveFailReward: 1
   mustFaceTargetSteps: 30
-  facingDistance: 0.97
+  facingDistance: 0.99
   facingRewardDistance: 0.995

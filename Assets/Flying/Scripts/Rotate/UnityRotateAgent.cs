@@ -22,7 +22,7 @@ namespace Flying.Scripts.Rotate
             AddVectorObs(model.rotation);
             AddVectorObs(model.velocity);
             AddVectorObs(model.target);
-            AddVectorObs(model.speed);
+            AddVectorObs(model.rotationAngle);
             AddVectorObs(model.turnDirection);
         }
 
@@ -37,7 +37,7 @@ namespace Flying.Scripts.Rotate
         private void ContinuousActions(float[] act)
         {
             var rotate = Mathf.Clamp(act[0], -1f, 1f);
-            Rotate(model.speed * rotate);
+            Rotate(rotate);
         }
 
 
@@ -49,17 +49,17 @@ namespace Flying.Scripts.Rotate
                 case 0:
                     break;
                 case 1:
-                    Rotate(model.speed * -1f);
+                    Rotate(-1f);
                     break;
                 case 2:
-                    Rotate(model.speed * 1f);
+                    Rotate(1f);
                     break;
             }
         }
 
         private void Rotate(float rotation)
         {
-            body.AddTorque(body.transform.up * rotation, ForceMode.VelocityChange);
+            body.transform.Rotate(body.transform.up, model.rotationAngle * rotation);
         }
 
         public override float[] Heuristic()

@@ -6,7 +6,7 @@ namespace Flying.Scripts.Rotate
     public class UnityRotateArea : UnityStepableArea
     {
         [SerializeField] private Transform target;
-        [SerializeField] private float moveSpeed;
+        [SerializeField] private float rotationAngle;
         [SerializeField] private float doneReward;
         [SerializeField] private bool giveRotationReward;
         [SerializeField] private bool giveDoneReward;
@@ -14,7 +14,7 @@ namespace Flying.Scripts.Rotate
         [SerializeField] private int mustFaceTargetSteps = 0;
         private int stepsFacing = 0; 
         [SerializeField] private float facingDistance = 0.95f;
-        [SerializeField] private float facingRewardDistance = 0.995f;
+        [SerializeField] private float facingRewardDistance = 0.99f;
         public RotateAgent.RotateAgentModel agent { get; private set; }
         private int step;
         private int initialTurnDirection;
@@ -115,7 +115,8 @@ namespace Flying.Scripts.Rotate
             if (!giveRotationReward) return;
             if (rotationToTarget == 0) return;
             if (unityAgent.IsDone()) return;
-            var stepReward = 1F * rotationToTarget / maxSteps;
+            var proportionalRotation = 1 - rotationToTarget;
+            var stepReward = -5F * proportionalRotation / maxSteps;
             unityAgent.AddReward(stepReward);
         }
 
@@ -124,7 +125,7 @@ namespace Flying.Scripts.Rotate
             step = 0;
             var targetPosition = target.localPosition;
 
-            agent = RotateAgent.Create(Quaternion.identity, targetPosition, moveSpeed);
+            agent = RotateAgent.Create(Quaternion.identity, targetPosition, rotationAngle);
             ResetUnityEntities(Quaternion.identity, targetPosition);
         }
 
