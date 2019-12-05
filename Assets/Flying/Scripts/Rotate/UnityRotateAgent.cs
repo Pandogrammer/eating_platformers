@@ -6,7 +6,6 @@ namespace Flying.Scripts.Rotate
 {
     public class UnityRotateAgent : Agent
     {
-
         [SerializeField] public Rigidbody body;
     
         private BehaviorParameters behaviorParameters;
@@ -17,13 +16,14 @@ namespace Flying.Scripts.Rotate
             area = GetComponentInParent<UnityRotateArea>();
             behaviorParameters = GetComponent<BehaviorParameters>();
         }
-    
+
         public override void CollectObservations()
         {
             AddVectorObs(model.rotation);
             AddVectorObs(model.velocity);
             AddVectorObs(model.target);
             AddVectorObs(model.speed);
+            AddVectorObs(model.turnDirection);
         }
 
         public override void AgentAction(float[] vectorAction, string textAction)
@@ -43,9 +43,11 @@ namespace Flying.Scripts.Rotate
 
         private void DiscreteActions(float[] act)
         {
-            var impulseUpward = Mathf.FloorToInt(act[0]);
-            switch (impulseUpward)
+            var rotate = Mathf.FloorToInt(act[0]);
+            switch (rotate)
             {
+                case 0:
+                    break;
                 case 1:
                     Rotate(model.speed * -1f);
                     break;

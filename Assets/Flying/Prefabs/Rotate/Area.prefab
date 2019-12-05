@@ -77,12 +77,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    vectorObservationSize: 11
+    vectorObservationSize: 12
     numStackedVectorObservations: 1
     vectorActionSize: 01000000
     vectorActionDescriptions: []
     vectorActionSpaceType: 1
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 5022602860645237092, guid: 84e8cb38d6cb63949b39d424f154b298, type: 3}
   m_InferenceDevice: 0
   m_UseHeuristic: 0
   m_BehaviorName: Rotate
@@ -337,6 +337,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1749991909333904636}
-  moveSpeed: 1
-  doneReward: 1.5
-  rotationReward: 1
+  moveSpeed: 0.1
+  doneReward: 3
+  giveRotationReward: 1
+  giveDoneReward: 1
+  giveFailReward: 1
+  mustFaceTargetSteps: 30
+  facingDistance: 0.97
+  facingRewardDistance: 0.995
