@@ -10,6 +10,6 @@ public class PlayerUI : MonoBehaviour
 
     void Update()
     {
-        hp.text = collector.Hp.ToString("0.00");
+        hp.text = collector.hp.ToString("0.00");
     }
 }

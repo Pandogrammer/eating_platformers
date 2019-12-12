@@ -10,7 +10,7 @@ public class AgentCollector : Agent
     public override void CollectObservations()
     {
         AddVectorObs(collector.Body.velocity);
-        AddVectorObs(collector.Hp);
+        AddVectorObs(collector.hp);
     }
 
     public override void AgentAction(float[] vectorAction, string textAction)

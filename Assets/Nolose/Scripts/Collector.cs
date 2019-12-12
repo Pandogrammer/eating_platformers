@@ -6,10 +6,9 @@ public class Collector : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float rotationAngle;
     [SerializeField] private EatingBehaviour eating;
-    [SerializeField] private float hp;
+    [SerializeField] public float hp;
 
     public bool justEeaten;
-    public float Hp => hp;
     public bool IsDead => hp <= 0;
     public Rigidbody Body => body;
 
