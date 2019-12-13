@@ -1,8 +1,6 @@
-using System.Collections.Generic;
-using MLAgents;
 using UnityEngine;
 
-namespace Flying.Scripts.Stepable
+namespace GenericScripts.Stepable
 {
     public abstract class UnityStepableArea : MonoBehaviour
     {

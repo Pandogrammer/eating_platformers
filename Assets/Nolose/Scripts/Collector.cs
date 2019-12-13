@@ -12,12 +12,6 @@ public class Collector : MonoBehaviour
     public bool IsDead => hp <= 0;
     public Rigidbody Body => body;
 
-    private void Update()
-    {
-        if (IsDead) return;
-        hp -= Time.deltaTime / 10f;
-    }
-
     public void TurnLeft()
     {
         body.transform.Rotate(body.transform.up, -rotationAngle);

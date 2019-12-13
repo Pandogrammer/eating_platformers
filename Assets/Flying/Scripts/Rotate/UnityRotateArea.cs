@@ -1,4 +1,4 @@
-using Flying.Scripts.Stepable;
+using GenericScripts.Stepable;
 using UnityEngine;
 
 namespace Flying.Scripts.Rotate

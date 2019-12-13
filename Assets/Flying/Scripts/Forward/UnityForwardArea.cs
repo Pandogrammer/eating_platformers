@@ -1,6 +1,6 @@
 using System;
 using Flying.Scripts.Fly;
-using Flying.Scripts.Stepable;
+using GenericScripts.Stepable;
 using UnityEngine;
 
 public class UnityForwardArea : UnityStepableArea

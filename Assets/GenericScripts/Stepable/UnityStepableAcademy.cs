@@ -1,9 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
-using Flying.Scripts.Stepable;
 using MLAgents;
 
-namespace Flying.Scripts.Fly.Unity
+namespace GenericScripts.Stepable
 {
     public class UnityStepableAcademy : Academy
     {
