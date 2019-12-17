@@ -30,29 +30,50 @@ namespace Nolose.Scripts
 
         public override void Step(int maxSteps)
         {
-            foreach (var agent in agentCollectors.Where(agent => !agent.IsDone()))
-            {
-                //step
-                agent.AddReward(-1F / maxSteps);
-                //dead
-                if (agent.Collector.IsDead)
-                {
-                    agent.SetReward(-2F);
-                    agent.Done();
-                }
+            ProcessCollectors(maxSteps);
+            StepAdvance(maxSteps);
+        }
 
-                //eaten
-                if (agent.Collector.justEeaten)
-                {
-                    agent.AddReward(0.1F);
-                    agent.Collector.justEeaten = false;
-                }
-            
-                agent.Collector.hp -= 0.0002f;
+        private void ProcessCollectors(int maxSteps)
+        {
+            foreach (var agent in agentCollectors)
+            {
+                StepReward(maxSteps, agent);
+                EatReward(agent);
+                HpDecay(agent);
+                DeathReward(agent);
             }
-            
+        }
+
+        private void StepAdvance(int maxSteps)
+        {
             step++;
             if (step > maxSteps) Reset();
+        }
+
+        private static void HpDecay(AgentCollector agent)
+        {
+            if (agent.Collector.IsDead) return;
+            agent.Collector.hp -= 0.0002f;
+        }
+
+        private static void EatReward(AgentCollector agent)
+        {
+            if (!agent.Collector.justEeaten) return;
+            agent.AddReward(0.1F);
+            agent.Collector.justEeaten = false;
+        }
+
+        private static void DeathReward(AgentCollector agent)
+        {
+            if (!agent.Collector.IsDead) return;
+            agent.SetReward(-2F);
+        }
+
+        private static void StepReward(int maxSteps, AgentCollector agent)
+        {
+            if (agent.Collector.IsDead) return;
+            agent.AddReward(-1F / maxSteps);
         }
 
         private void Reset()
@@ -72,11 +93,10 @@ namespace Nolose.Scripts
 
         private void ResetCollectors()
         {
-            foreach (var agent in agentCollectors)
+            foreach (var collector in agentCollectors)
             {
-                agent.Done();
-                agent.Collector.hp = 10;
-                agent.AgentReset();
+                collector.Done();
+                collector.Collector.hp = 10;
             }
         }
     }

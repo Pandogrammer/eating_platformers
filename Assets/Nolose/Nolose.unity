@@ -1169,8 +1169,8 @@ MonoBehaviour:
   m_TrainingConfiguration:
     width: 80
     height: 80
-    qualityLevel: 4
-    timeScale: 1
+    qualityLevel: 1
+    timeScale: 100
     targetFrameRate: -1
   m_InferenceConfiguration:
     width: 1280
@@ -1181,7 +1181,7 @@ MonoBehaviour:
   resetParameters:
     m_ResetParameters:
     - key: max_steps
-      value: 100
+      value: 10000
 --- !u!4 &2037862741
 Transform:
   m_ObjectHideFlags: 0
@@ -1341,11 +1341,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1018274997880009205, guid: d13e2f65075ae7144bc680d3c56ffd84,
-        type: 3}
-      propertyPath: m_UseHeuristic
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d13e2f65075ae7144bc680d3c56ffd84, type: 3}

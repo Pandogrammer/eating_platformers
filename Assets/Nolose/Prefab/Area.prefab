@@ -543,7 +543,6 @@ GameObject:
   - component: {fileID: 1018274997880009199}
   - component: {fileID: 1018274997880009200}
   - component: {fileID: 1018274997880009201}
-  - component: {fileID: 1018274997880009202}
   - component: {fileID: 1018274997880009203}
   - component: {fileID: 1018274997880009204}
   - component: {fileID: 1018274997880009205}
@@ -605,19 +604,6 @@ MonoBehaviour:
   FreezeX: 0
   FreezeY: 0
   FreezeZ: 0
---- !u!114 &1018274997880009202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1018274997880009198}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44cd240c8ab2d6749aff207e11a25690, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collector: {fileID: 1018274997880009200}
 --- !u!114 &1018274997880009203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -645,7 +631,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentParameters:
     maxStep: 0
-    resetOnDone: 0
+    resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 4
   collector: {fileID: 1018274997880009200}

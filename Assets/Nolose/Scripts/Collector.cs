@@ -14,26 +14,31 @@ public class Collector : MonoBehaviour
 
     public void TurnLeft()
     {
+        if (IsDead) return;
         body.transform.Rotate(body.transform.up, -rotationAngle);
     }
 
     public void TurnRight()
     {
+        if (IsDead) return;
         body.transform.Rotate(body.transform.up, rotationAngle);
     }
 
     public void GoBackward()
     {
+        if (IsDead) return;
         body.AddForce(-body.transform.forward * speed, ForceMode.VelocityChange);
     }
 
     public void GoForward()
-    {
+    {        
+        if (IsDead) return;
         body.AddForce(body.transform.forward * speed, ForceMode.VelocityChange);
     }
 
     public void Eat()
     {
+        if (IsDead) return;
         var foodEaten = eating.TryToEat();
         hp += foodEaten;
         if (foodEaten > 0)
