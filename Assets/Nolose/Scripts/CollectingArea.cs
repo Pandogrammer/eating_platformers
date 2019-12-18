@@ -10,6 +10,7 @@ namespace Nolose.Scripts
         private List<AgentCollector> agentCollectors;
         private CollectorFoodSpawner foodSpawner;
         private List<GameObject> spawnedFood;
+        private float collectorInitialHp;
 
         public int step { get; private set; }
 
@@ -23,6 +24,7 @@ namespace Nolose.Scripts
         public void Setup(List<AgentCollector> agentCollectors, CollectorFoodSpawner foodSpawner)
         {
             step = 0;
+            collectorInitialHp = 10F;
             spawnedFood = new List<GameObject>();
             this.agentCollectors = agentCollectors;
             this.foodSpawner = foodSpawner;
@@ -32,6 +34,15 @@ namespace Nolose.Scripts
         {
             ProcessCollectors(maxSteps);
             StepAdvance(maxSteps);
+            TryToSpawnFood();
+        }
+
+        private void TryToSpawnFood()
+        {
+            if (step % 300 == 0)
+            {
+                spawnedFood.Add(foodSpawner.SpawnFood());
+            }
         }
 
         private void ProcessCollectors(int maxSteps)
@@ -40,7 +51,7 @@ namespace Nolose.Scripts
             {
                 StepReward(maxSteps, agent);
                 EatReward(agent);
-                HpDecay(agent);
+                HpDecay(agent, maxSteps);
                 DeathReward(agent);
             }
         }
@@ -51,10 +62,10 @@ namespace Nolose.Scripts
             if (step > maxSteps) Reset();
         }
 
-        private static void HpDecay(AgentCollector agent)
+        private void HpDecay(AgentCollector agent, int maxSteps)
         {
             if (agent.Collector.IsDead) return;
-            agent.Collector.hp -= 0.0002f;
+            agent.Collector.hp -= collectorInitialHp * 2 / maxSteps;
         }
 
         private static void EatReward(AgentCollector agent)
@@ -80,7 +91,16 @@ namespace Nolose.Scripts
         {
             step = 0;
             DestroyFood();
+            SetCollectorsAsDone();
             ResetCollectors();
+        }
+
+        private void SetCollectorsAsDone()
+        {
+            foreach (var collector in agentCollectors)
+            {
+                collector.Done();
+            }
         }
 
         private void DestroyFood()
@@ -95,8 +115,7 @@ namespace Nolose.Scripts
         {
             foreach (var collector in agentCollectors)
             {
-                collector.Done();
-                collector.Collector.hp = 10;
+                collector.Collector.hp = collectorInitialHp;
             }
         }
     }

@@ -2327,8 +2327,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6298296404864775799}
-  - component: {fileID: 6298296404864775793}
   - component: {fileID: 6298296404864775792}
+  - component: {fileID: 280699791286450760}
   m_Layer: 0
   m_Name: FoodSpawner
   m_TagString: Untagged
@@ -2350,22 +2350,6 @@ Transform:
   m_Father: {fileID: 1018274997619091427}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6298296404864775793
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6298296404864775798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 745c2f64b96078d45abe2baa792ff0fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawningArea: {fileID: 6298296404864775792}
-  cooldown: 3
-  foodPrefab: {fileID: 547848315831978352, guid: 5cd575198ec75de4c89d4d68f38f09ea,
-    type: 3}
 --- !u!135 &6298296404864775792
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2379,3 +2363,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 24
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &280699791286450760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6298296404864775798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0e325e001d04758829e14d0755545de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawningArea: {fileID: 6298296404864775792}
+  cooldown: 3
+  foodPrefab: {fileID: 547848315831978352, guid: 5cd575198ec75de4c89d4d68f38f09ea,
+    type: 3}
