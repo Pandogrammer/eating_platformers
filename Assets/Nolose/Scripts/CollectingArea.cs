@@ -16,7 +16,7 @@ namespace Nolose.Scripts
 
         private void Start()
         {
-            var agentCollectors = FindObjectsOfType<AgentCollector>().ToList();
+            var agentCollectors = GetComponentsInChildren<AgentCollector>().ToList();
             var foodSpawner = GetComponentInChildren<CollectorFoodSpawner>();
             Setup(agentCollectors, foodSpawner);
         }
