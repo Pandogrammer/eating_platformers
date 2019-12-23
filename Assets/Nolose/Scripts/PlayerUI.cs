@@ -10,11 +10,11 @@ public class PlayerUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI hp;
     [SerializeField] private TextMeshProUGUI step;
     [SerializeField] private Collector collector;
-    [SerializeField] private CollectingArea area;
+    [SerializeField] private UnityStepableAcademy academy;
 
     void Update()
     {
         hp.text = "HP: "+collector.hp.ToString("0.0000");
-        step.text = "STEP: "+area.step;
+        step.text = "STEP: "+academy.step;
     }
 }

@@ -1,7 +1,8 @@
 ﻿using MLAgents;
+using Nolose.Scripts;
 using UnityEngine;
 
-public class AgentCollector : Agent
+public class CollectorAgent : Agent
 {
     [SerializeField] private Collector collector;
     [SerializeField] private BehaviorParameters behaviorParameters;
@@ -17,6 +18,8 @@ public class AgentCollector : Agent
     {
         if (behaviorParameters.brainParameters.vectorActionSpaceType == SpaceType.Discrete)
             DiscreteActions(vectorAction);
+        
+        CollectingArea.ProcessMe(this);
     }
 
     private void DiscreteActions(float[] act)
@@ -87,4 +90,5 @@ public class AgentCollector : Agent
         public static bool LEFT => Input.GetKey(KeyCode.A);
         public static bool RIGHT => Input.GetKey(KeyCode.D);
     }
+
 }

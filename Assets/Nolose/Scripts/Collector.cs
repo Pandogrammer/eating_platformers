@@ -7,8 +7,6 @@ public class Collector : MonoBehaviour
     [SerializeField] private float rotationAngle;
     [SerializeField] private EatingBehaviour eating;
     [SerializeField] public float hp;
-
-    public bool justEeaten;
     public bool IsDead => hp <= 0;
     public Rigidbody Body => body;
 
@@ -39,9 +37,6 @@ public class Collector : MonoBehaviour
     public void Eat()
     {
         if (IsDead) return;
-        var foodEaten = eating.TryToEat();
-        hp += foodEaten;
-        if (foodEaten > 0)
-            justEeaten = true;
+        hp += eating.TryToEat();
     }
 }

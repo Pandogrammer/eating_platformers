@@ -20,7 +20,7 @@ public class UnityUpwardArea : UnityStepableArea
         Initialize();
     }
 
-    public override void Step(int maxSteps)
+    public void Step(int maxSteps)
     {
         step += 1;
 
@@ -96,5 +96,15 @@ public class UnityUpwardArea : UnityStepableArea
         unityAgent.body.transform.localPosition = initialPosition;
         unityAgent.body.velocity = Vector3.zero;
         unityAgent.body.rotation = Quaternion.identity;
+    }
+
+    public override void Step(int step, int maxSteps)
+    {
+        throw new NotImplementedException();
+    }
+
+    public override void Reset()
+    {
+        throw new NotImplementedException();
     }
 }

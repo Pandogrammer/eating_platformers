@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using GenericScripts.Stepable;
 using UnityEngine;
@@ -7,37 +8,40 @@ namespace Nolose.Scripts
 {
     public class CollectingArea : UnityStepableArea
     {
-        private List<AgentCollector> agentCollectors;
+        private List<CollectorAgent> agentCollectors;
         private CollectorFoodSpawner foodSpawner;
         private List<GameObject> spawnedFood;
         private float collectorInitialHp;
 
-        public int step { get; private set; }
-
         private void Start()
         {
-            var agentCollectors = GetComponentsInChildren<AgentCollector>().ToList();
+            var agentCollectors = GetComponentsInChildren<CollectorAgent>().ToList();
             var foodSpawner = GetComponentInChildren<CollectorFoodSpawner>();
             Setup(agentCollectors, foodSpawner);
         }
 
-        public void Setup(List<AgentCollector> agentCollectors, CollectorFoodSpawner foodSpawner)
+        public void Setup(List<CollectorAgent> agentCollectors, CollectorFoodSpawner foodSpawner)
         {
-            step = 0;
             collectorInitialHp = 10F;
             spawnedFood = new List<GameObject>();
             this.agentCollectors = agentCollectors;
             this.foodSpawner = foodSpawner;
         }
 
-        public override void Step(int maxSteps)
+        public override void Step(int step, int maxSteps)
         {
             ProcessCollectors(maxSteps);
-            StepAdvance(maxSteps);
-            TryToSpawnFood();
+            TryToSpawnFood(step);
         }
 
-        private void TryToSpawnFood()
+        public override void Reset()
+        {
+            DestroyFood();
+            SetCollectorsAsDone();
+            ResetCollectors();
+        }
+
+        private void TryToSpawnFood(int step)
         {
             if (step % 300 == 0)
             {
@@ -49,50 +53,25 @@ namespace Nolose.Scripts
         {
             foreach (var agent in agentCollectors)
             {
-                StepReward(maxSteps, agent);
-                EatReward(agent);
+//                if (agent.IsDone()) continue;
+//                var reward = CollectorRewardFunction.Calculate(agent, maxSteps);
+//                if(Math.Abs(reward) > 0.0001f) agent.AddReward(reward);
                 HpDecay(agent, maxSteps);
-                DeathReward(agent);
             }
         }
 
-        private void StepAdvance(int maxSteps)
+        public static void ProcessMe(CollectorAgent agent)
         {
-            step++;
-            if (step > maxSteps) Reset();
+            var reward = CollectorRewardFunction.Calculate(agent, 3000);
+            if(Math.Abs(reward) > 0.0001f) agent.AddReward(reward);
         }
 
-        private void HpDecay(AgentCollector agent, int maxSteps)
+        private void HpDecay(CollectorAgent collectorAgent, int maxSteps)
         {
-            if (agent.Collector.IsDead) return;
-            agent.Collector.hp -= collectorInitialHp * 2 / maxSteps;
-        }
-
-        private static void EatReward(AgentCollector agent)
-        {
-            if (!agent.Collector.justEeaten) return;
-            agent.AddReward(0.1F);
-            agent.Collector.justEeaten = false;
-        }
-
-        private static void DeathReward(AgentCollector agent)
-        {
-            if (!agent.Collector.IsDead) return;
-            agent.SetReward(-2F);
-        }
-
-        private static void StepReward(int maxSteps, AgentCollector agent)
-        {
-            if (agent.Collector.IsDead) return;
-            agent.AddReward(-1F / maxSteps);
-        }
-
-        private void Reset()
-        {
-            step = 0;
-            DestroyFood();
-            SetCollectorsAsDone();
-            ResetCollectors();
+            if (collectorAgent.Collector.IsDead) 
+                return;
+            
+            collectorAgent.Collector.hp -= collectorInitialHp * 2 / maxSteps;
         }
 
         private void SetCollectorsAsDone()
@@ -107,7 +86,7 @@ namespace Nolose.Scripts
         {
             foreach (var food in spawnedFood)
             {
-                Destroy(food);
+                foodSpawner.UnspawnFood(food);
             }
         }
 

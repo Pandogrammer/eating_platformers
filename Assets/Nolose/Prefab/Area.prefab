@@ -541,11 +541,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1018274997880009199}
+  - component: {fileID: 1018274997880009204}
+  - component: {fileID: 1018274997880009205}
   - component: {fileID: 1018274997880009200}
   - component: {fileID: 1018274997880009201}
   - component: {fileID: 1018274997880009203}
-  - component: {fileID: 1018274997880009204}
-  - component: {fileID: 1018274997880009205}
   - component: {fileID: 1018274997880009206}
   - component: {fileID: 1018274997880009207}
   m_Layer: 0
@@ -570,53 +570,6 @@ Transform:
   m_Father: {fileID: 1018274997619091427}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1018274997880009200
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1018274997880009198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e2cb8bbbe307dc4181918967414ab37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  body: {fileID: 1018274998051993995}
-  speed: 0.5
-  rotationAngle: 2
-  eating: {fileID: 1018274997880009203}
-  hp: 10
-  justEeaten: 0
---- !u!114 &1018274997880009201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1018274997880009198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f767066857bceb4baae4d5092d8a683, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  follow: {fileID: 1018274998051993991}
-  FreezeX: 0
-  FreezeY: 0
-  FreezeZ: 0
---- !u!114 &1018274997880009203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1018274997880009198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 671ba6b06f019c640b1c97cbbf8ddea8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eatingArea: {fileID: 1018274997877904799}
 --- !u!114 &1018274997880009204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -658,6 +611,52 @@ MonoBehaviour:
   m_InferenceDevice: 0
   m_UseHeuristic: 0
   m_BehaviorName: Collector
+--- !u!114 &1018274997880009200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018274997880009198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e2cb8bbbe307dc4181918967414ab37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  body: {fileID: 1018274998051993995}
+  speed: 0.5
+  rotationAngle: 2
+  eating: {fileID: 1018274997880009203}
+  hp: 10
+--- !u!114 &1018274997880009201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018274997880009198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f767066857bceb4baae4d5092d8a683, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  follow: {fileID: 1018274998051993991}
+  FreezeX: 0
+  FreezeY: 0
+  FreezeZ: 0
+--- !u!114 &1018274997880009203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018274997880009198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 671ba6b06f019c640b1c97cbbf8ddea8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eatingArea: {fileID: 1018274997877904799}
 --- !u!114 &1018274997880009206
 MonoBehaviour:
   m_ObjectHideFlags: 0

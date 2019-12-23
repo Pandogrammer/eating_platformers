@@ -27,7 +27,7 @@ namespace Flying.Scripts.Rotate
             Initialize();
         }
 
-        public override void Step(int maxSteps)
+        public void Step(int maxSteps)
         {
             step += 1;
 
@@ -168,6 +168,16 @@ namespace Flying.Scripts.Rotate
             unityAgent.body.rotation = initialRotation;
             initialTurnDirection =
                 CalculateTurnDirection(unityAgent.body, targetPosition, unityAgent.body.transform.localPosition);
+        }
+
+        public override void Step(int step, int maxSteps)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public override void Reset()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

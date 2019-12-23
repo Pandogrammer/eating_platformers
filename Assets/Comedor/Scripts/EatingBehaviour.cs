@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using food;
 using UnityEngine;
 
 public class EatingBehaviour : MonoBehaviour
@@ -20,7 +19,7 @@ public class EatingBehaviour : MonoBehaviour
             if (collider.CompareTag("food"))
             {
                 foodEaten++;
-                Destroy(collider.gameObject);
+                collider.gameObject.SetActive(false);
             }
         }
 

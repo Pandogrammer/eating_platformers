@@ -10,26 +10,15 @@ namespace Nolose.Editor.Tests
     {
         private CollectingArea area;
         private CollectorFoodSpawner foodSpawner;
-        private List<AgentCollector> agentCollectors;
+        private List<CollectorAgent> agentCollectors;
 
         [SetUp]
         public void Setup()
         {
-            agentCollectors = new List<AgentCollector>();
+            agentCollectors = new List<CollectorAgent>();
             foodSpawner = Substitute.For<CollectorFoodSpawner>();
             area = new CollectingArea();
             area.Setup(agentCollectors, foodSpawner);
-        }
-        
-        [Test]
-        public void area_reset()
-        {
-            for (int i = 0; i < 15; i++)
-            {
-                area.Step(10);            
-            }
-            
-            Assert.AreEqual(5, area.step);
         }
     }
 }
