@@ -6,8 +6,16 @@ public class CollectorAgent : Agent
 {
     [SerializeField] private Collector collector;
     [SerializeField] private BehaviorParameters behaviorParameters;
+    [SerializeField] private CollectingArea area;
+    private int step;
 
     public Collector Collector => collector;
+
+    public override void InitializeAgent()
+    {
+        step = 0;
+    }
+
     public override void CollectObservations()
     {
         AddVectorObs(collector.Body.velocity);
@@ -19,8 +27,27 @@ public class CollectorAgent : Agent
         if (behaviorParameters.brainParameters.vectorActionSpaceType == SpaceType.Discrete)
             DiscreteActions(vectorAction);
         
-        CollectingArea.ProcessMe(this);
+        var reward = CollectorRewardFunction.Calculate(this, agentParameters.maxStep);
+        AddReward(reward);
+        Step();
     }
+
+    private void Step()
+    {
+        var maxStep = agentParameters.maxStep;
+        area.Step(step, maxStep);
+        step++;
+        CheckReset(maxStep);
+    }
+
+    private void CheckReset(int maxStep)
+    {
+        if (step <= maxStep) return;
+        step = 0;
+        Done();
+        area.Reset();
+    }
+
 
     private void DiscreteActions(float[] act)
     {

@@ -37,7 +37,7 @@ namespace Nolose.Scripts
         public override void Reset()
         {
             DestroyFood();
-            SetCollectorsAsDone();
+            //SetCollectorsAsDone();
             ResetCollectors();
         }
 
@@ -60,11 +60,6 @@ namespace Nolose.Scripts
             }
         }
 
-        public static void ProcessMe(CollectorAgent agent)
-        {
-            var reward = CollectorRewardFunction.Calculate(agent, 3000);
-            if(Math.Abs(reward) > 0.0001f) agent.AddReward(reward);
-        }
 
         private void HpDecay(CollectorAgent collectorAgent, int maxSteps)
         {
